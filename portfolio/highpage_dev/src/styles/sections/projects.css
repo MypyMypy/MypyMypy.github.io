@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("/fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Bold.woff2") format("woff2"), url("/fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.projects {
+  padding: 50px 0 54px;
+  color: #202020;
+}
+
+.projects__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: "ttfirsneue";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.projects__grid-item:not(:last-child) .project--large {
+  margin-bottom: 5px;
+}
+
+.projects__grid-item:nth-child(1) .projects__card {
+  background-image: url("/images/project_1_320.png");
+}
+
+.projects__grid-item:nth-child(2) .projects__card {
+  background-image: url("/images/project_2_320.png");
+}
+
+.projects__grid-item:nth-child(3) .projects__card {
+  background-image: url("/images/project_3_320.png");
+}
+
+.projects__grid-item:nth-child(4) .projects__card {
+  background-image: url("/images/project_4_320.png");
+}
+
+.projects__grid-item:nth-child(5) .projects__card {
+  background-image: url("/images/project_5_320.png");
+}
+
+.projects__grid-item:nth-child(6) .projects__card {
+  background-image: url("/images/project_6_320.png");
+}
+
+.projects__grid-item:nth-child(7) .projects__card {
+  background-image: url("/images/project_7_320.png");
+}
+
+.project {
+  min-height: 278px;
+  padding-top: 202px;
+  background-repeat: no-repeat;
+  background-size: 100% 184px;
+  position: relative;
+  color: #202020;
+}
+
+.project__type {
+  padding: 4px 14px;
+}
+
+.project__btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  min-width: 115px;
+  max-width: 100%;
+  color: #fff;
+  font-weight: 700;
+  border: 3px solid #FF6E30;
+  background-color: transparent;
+  padding: 8px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 9px 20px;
+  min-width: auto;
+}
+
+.project__desc {
+  margin: 0;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.project__date {
+  padding-left: 18px;
+  color: #999;
+  margin-top: auto;
+  background-image: url(/images/mdi_calendar_today.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 12px;
+}
+
+.project__title {
+  margin: 0;
+  font-family: "ttfirsneue";
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.project__date--large {
+  margin-bottom: 9px;
+  color: #fff;
+  background-image: url(/images/mdi_calendar_today_large.svg);
+}
+
+.project__desc--large {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.project--small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding-bottom: 3px;
+}
+
+.project--large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 422px;
+  padding: 30px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=projects.css.map */

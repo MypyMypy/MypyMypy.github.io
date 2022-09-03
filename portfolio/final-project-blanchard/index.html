@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchard</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <script defer src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="styles/choices.min.css">
+  <script defer src="scripts/choices.min.js"></script>
+
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+
+  <script defer src="scripts/inputmask.min.js"></script>
+  <script defer src="scripts/just-validate.min.js"></script>
+  <link rel="stylesheet" href="styles/justValidateTooltip.min.css">
+
+  <script defer src="scripts/index.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="blanchard-page">
+
+  <header class="blanchard-page__header header">
+    <div class="hat">
+      <div class="hat__container container">
+        <button class="hat__btn-open btn-is-active" aria-label="Кнопка открытия и закрытия меню навигации">
+          <svg class="hat__btn-open-image" width="21" height="15" viewbox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+            <rect width="19.9996" height="1.95652" transform="matrix(-1 0 0 1 21 0)" fill="white"/>
+            <path d="M16.666 6.52173H0.999637V8.47825H16.666V6.52173Z" fill="white"/>
+            <path d="M14.332 13.0435H0.998943V15H14.332V13.0435Z" fill="white"/>
+          </svg>
+        </button>
+        <a href="#" class="hat__logo-link" aria-label="Ссылка на главную страницу">
+          <img src="img/logo.svg" alt="Логотип Blanchard" class="hat__logo-image">
+        </a>
+        <nav class="header__navig navigation">
+          <div class="navigation__top-block">
+            <button class="navigation__btn-close btn-is-disabled" aria-label="Кнопка открытия и закрытия меню навигации">
+              <svg class="navigation__btn-close-image" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+              <rect width="19.2824" height="1.92824" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36523 0.00152588)" fill="white"/>
+              <rect width="19.2824" height="1.92824" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 13.6365)" fill="white"/>
+              </svg>
+            </button>
+            <ul class="navigation__list blanchard-list" aria-label="Навигация по странице">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-about blanchard-link">О нас</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-gallery blanchard-link">Галерея</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-catalog blanchard-link">Каталог</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-events blanchard-link">События</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-editions blanchard-link">Издания</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-projects blanchard-link">Проекты</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link navigation__link-contacts blanchard-link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="navigation__link navigation__link-btn blanchard-link-btn">
+            <svg class="navigation__link-btn-image" width="9" height="9" viewbox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+            <path d="M3.545 6.295L4.25 7L6.75 4.5L4.25 2L3.545 2.705L4.835 4H0V5H4.835L3.545 6.295ZM8 0H1C0.445 0 0 0.45 0 1V3H1V1H8V8H1V6H0V8C0 8.55 0.445 9 1 9H8C8.55 9 9 8.55 9 8V1C9 0.45 8.55 0 8 0Z" fill="white"/>
+            </svg>&nbsp;Войти
+          </a>
+        </nav>
+        <button class="hat__search btn-is-active" aria-label="Кнопка открытия поисковой строки">
+          <svg class="hat__search-image" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+            <rect width="5.02605" height="1.25651" transform="matrix(-0.71131 0.702878 0.71131 0.702878 3.57617 11.5841)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.75929 13.3207C5.45281 13.3207 2.89432 10.5994 2.89432 7.40037C2.89432 4.2013 5.45281 1.48007 8.75929 1.48007C12.0658 1.48007 14.6243 4.2013 14.6243 7.40037C14.6243 10.5994 12.0658 13.3207 8.75929 13.3207ZM8.75929 14.8007C4.76036 14.8007 1.51858 11.4875 1.51858 7.40037C1.51858 3.31326 4.76036 0 8.75929 0C12.7582 0 16 3.31326 16 7.40037C16 11.4875 12.7582 14.8007 8.75929 14.8007Z" fill="white"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hat__search-block search-block">
+        <div class="search-block__container">
+          <button class="search-block__btn-close btn-is-disabled" aria-label="Кнопка закрытия поисковой строки">
+            <svg class="search-block__btn-close-image" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+              <rect width="19.2824" height="1.92824" transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36523 0.00152588)" fill="white"/>
+              <rect width="19.2824" height="1.92824" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 13.6365)" fill="white"/>
+            </svg>
+          </button>
+          <div class="search-block__line-block">
+            <ul class="search-block__list blanchard-list">
+              <li class="search-block__list-item">
+                <p tabindex="0" class="search-block__link search-block__link-1 blanchard-link">
+                  Реализм
+                  <svg class="search-block__link-image" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                  </svg>
+                </p>
+                <div class="search-block__item-dropdown dropdown dropdown-1">
+                  <ul class="dropdown__list dropdown__list-firts blanchard-list customScroll" data-simplebar>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Тинторетто
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Фридрих
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонардо
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Верроккьо
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонтьевский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Доменико
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="search-block__list-item">
+                <p tabindex="0" class="search-block__link search-block__link-2 blanchard-link">
+                  Импрессионизм
+                  <svg class="search-block__link-image" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                  </svg>
+                </p>
+                <div class="search-block__item-dropdown dropdown dropdown-2">
+                  <ul class="dropdown__list dropdown__list-second blanchard-list customScroll" data-simplebar>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Моне
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Сислей
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Мане
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Ренуар
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонтьевский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Доменико
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="search-block__list-item">
+                <p tabindex="0" class="search-block__link search-block__link-3 blanchard-link">
+                  Постимпрессионизм
+                  <svg class="search-block__link-image" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                  </svg>
+                </p>
+                <div class="search-block__item-dropdown dropdown dropdown-3">
+                  <ul class="dropdown__list dropdown__list-third blanchard-list customScroll" data-simplebar>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Ван Гог
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Сезанн
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Гоген
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Сёра
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонтьевский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Доменико
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="search-block__list-item">
+                <p tabindex="0" class="search-block__link search-block__link-4 blanchard-link">
+                  Авангард
+                  <svg class="search-block__link-image" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                  </svg>
+                </p>
+                <div class="search-block__item-dropdown dropdown dropdown-4">
+                  <ul class="dropdown__list dropdown__list-fourth blanchard-list customScroll" data-simplebar>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Кандийский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Маринетти
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Малевич
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Пикассо
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонтьевский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Доменико
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="search-block__list-item">
+                <p tabindex="0" class="search-block__link search-block__link-5 blanchard-link">
+                  Футуризм
+                  <svg class="search-block__link-image" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                  </svg>
+                </p>
+                <div class="search-block__item-dropdown dropdown dropdown-5">
+                  <ul class="dropdown__list dropdown__list-fifth blanchard-list customScroll" data-simplebar>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Карра
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Прателла
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Северини
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Балла
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Леонтьевский
+                      </div>
+                    </li>
+                    <li class="dropdown__item">
+                      <div tabindex="0" class="dropdown__item-content">
+                        Доменико
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <form action="https://jsonplaceholder.typicode.com/posts" class="search-block__line">
+              <input type="text" name="search" id="mySearch" placeholder="Поиск по сайту" class="search-block__input">
+              <button class="search-block__btn btn-is-disabled" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero__container container">
+        <h1 class="hero__header section-header">Прикоснитесь к прекрасному</h1>
+        <p class="hero__par">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+        <a href="#" class="hero__btn-link blanchard-link-btn">Подписаться на рассылку</a>
+        <div class="swiper-container hero__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper hero__swiper-wrapper">
+            <!-- Slides -->
+            <div class="hero__swiper-slide swiper-slide hero__swiper-slide-1"></div>
+            <div class="hero__swiper-slide swiper-slide hero__swiper-slide-2"></div>
+            <div class="hero__swiper-slide swiper-slide hero__swiper-slide-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="blanchard-main">
+    <section class="about">
+      <div class="about__container container">
+        <h2 class="about__header section-header" id="about-us">О нас</h2>
+        <p class="about__par">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery__container container">
+        <div class="gallery__hat">
+          <h2 class="gallery__header section-header" id="gallery">Галерея</h2>
+          <div class="gallery__select-container" tabindex="0">
+            <h4 class="gallery__select-name">Фильтр:</h4>
+              <select id="selectCustom" class="gallery__select" aria-label="Выбор фильтра">
+                <option value="1" data-path="gallery-paints" class="gallery__f-option">Живопись</option>
+                <option value="2" data-path="gallery-arts" class="gallery__f-option">Рисунок</option>
+                <option value="3" data-path="gallery-sculptures" class="gallery__f-option">Скульптура</option>
+              </select>
+          </div>
+        </div>
+        <div class="swiper-container2 gallery__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper gallery__swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage1_320">
+                <img class="gallery__image" src="img/gimages1_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage2_320">
+                <img class="gallery__image" src="img/gimages2_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage3_320">
+                <img class="gallery__image" src="img/gimages3_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage4_320">
+                <img class="gallery__image" src="img/gimages4_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage5_320">
+                <img class="gallery__image" src="img/gimages5_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage6_320">
+                <img class="gallery__image" src="img/gimages6_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage7_320">
+                <img class="gallery__image" src="img/gimages7_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage8_320">
+                <img class="gallery__image" src="img/gimages8_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage9_320">
+                <img class="gallery__image" src="img/gimages9_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage10_320">
+                <img class="gallery__image" src="img/gimages10_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage11_320">
+                <img class="gallery__image" src="img/gimages11_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage12_320">
+                <img class="gallery__image" src="img/gimages12_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage13_320">
+                <img class="gallery__image" src="img/gimages13_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage14_320">
+                <img class="gallery__image" src="img/gimages14_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage15_320">
+                <img class="gallery__image" src="img/gimages15_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage16_320">
+                <img class="gallery__image" src="img/gimages16_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage17_320">
+                <img class="gallery__image" src="img/gimages17_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage18_320">
+                <img class="gallery__image" src="img/gimages18_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage19_320">
+                <img class="gallery__image" src="img/gimages19_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage20_320">
+                <img class="gallery__image" src="img/gimages20_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage21_320">
+                <img class="gallery__image" src="img/gimages21_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage22_320">
+                <img class="gallery__image" src="img/gimages22_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage23_320">
+                <img class="gallery__image" src="img/gimages23_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidem">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage24_320">
+                <img class="gallery__image" src="img/gimages24_320.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage1_720">
+                <source srcset="img/gimages1_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages1_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage2_720">
+                <source srcset="img/gimages2_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages2_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage3_720">
+                <source srcset="img/gimages3_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages3_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage4_720">
+                <source srcset="img/gimages4_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages4_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage5_720">
+                <source srcset="img/gimages5_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages5_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage6_720">
+                <source srcset="img/gimages6_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages6_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage7_720">
+                <source srcset="img/gimages7_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages7_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage8_720">
+                <source srcset="img/gimages8_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages8_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage9_720">
+                <source srcset="img/gimages9_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages9_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage10_720">
+                <source srcset="img/gimages10_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages10_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage11_720">
+                <source srcset="img/gimages11_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages11_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage12_720">
+                <source srcset="img/gimages12_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages12_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage13_720">
+                <source srcset="img/gimages13_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages13_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage14_720">
+                <source srcset="img/gimages14_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages14_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage15_720">
+                <source srcset="img/gimages15_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages15_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage16_720">
+                <source srcset="img/gimages16_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages16_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage17_720">
+                <source srcset="img/gimages17_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages17_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage18_720">
+                <source srcset="img/gimages18_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages18_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage19_720">
+                <source srcset="img/gimages19_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages19_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage20_720">
+                <source srcset="img/gimages20_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages20_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidesm">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage21_720">
+                <source srcset="img/gimages21_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages21_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage22_720">
+                <source srcset="img/gimages22_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages22_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage23_720">
+                <source srcset="img/gimages23_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages23_720.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage24_720">
+                <source srcset="img/gimages24_1024.jpg" media="(min-width:1024px)">
+                <img class="gallery__image" src="img/gimages24_720.jpg" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidelg">
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage1_1024">
+                <img class="gallery__image" src="img/gimages1_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage2_1024">
+                <img class="gallery__image" src="img/gimages2_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage3_1024">
+                <img class="gallery__image" src="img/gimages3_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage4_1024">
+                <img class="gallery__image" src="img/gimages4_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage5_1024">
+                <img class="gallery__image" src="img/gimages5_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage6_1024">
+                <img class="gallery__image" src="img/gimages6_1024.jpg" alt="">
+             </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidelg">
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage7_1024">
+                <img class="gallery__image" src="img/gimages7_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage8_1024">
+                <img class="gallery__image" src="img/gimages8_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage9_1024">
+                <img class="gallery__image" src="img/gimages9_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage10_1024">
+                <img class="gallery__image" src="img/gimages10_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage11_1024">
+                <img class="gallery__image" src="img/gimages11_1024.jpg" alt="">
+             </picture>
+             <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage12_1024">
+                <img class="gallery__image" src="img/gimages12_1024.jpg" alt="">
+             </picture>
+            </div>
+            <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidelg">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage13_1024">
+                 <img class="gallery__image" src="img/gimages13_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage14_1024">
+                 <img class="gallery__image" src="img/gimages14_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage15_1024">
+                 <img class="gallery__image" src="img/gimages15_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage16_1024">
+                 <img class="gallery__image" src="img/gimages16_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage17_1024">
+                 <img class="gallery__image" src="img/gimages17_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage18_1024">
+                 <img class="gallery__image" src="img/gimages18_1024.jpg" alt="">
+              </picture>
+             </div>
+             <div class="swiper-slide gallery__swiper-slide gallery__swiper-slidelg">
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage19_1024">
+                 <img class="gallery__image" src="img/gimages19_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage20_1024">
+                 <img class="gallery__image" src="img/gimages20_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage21_1024">
+                 <img class="gallery__image" src="img/gimages21_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage22_1024">
+                 <img class="gallery__image" src="img/gimages22_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage23_1024">
+                 <img class="gallery__image" src="img/gimages23_1024.jpg" alt="">
+              </picture>
+              <picture class="gallery__images-container" tabindex="0" aria-label="Изображение галереи" data-path="gimgage24_1024">
+                 <img class="gallery__image" src="img/gimages24_1024.jpg" alt="">
+              </picture>
+             </div>
+            <!-- If we need pagination -->
+          </div>
+          <div class="gallery__swiper-buttons-block">
+            <div class="gallery__swiper-pagination swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="gallery__swiper-button-prev swiper-button-prev"></div>
+            <div class="gallery__swiper-button-next swiper-button-next"></div>
+          </div>
+      </div>
+      <p class="gallery__par">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery__login blanchard-link">авторизуйтесь,</a> либо воспользуйтесь лицензией.</p>
+      </div>
+      <div class="container gallery__popup popup">
+        <div class="popup__pic">
+          <button class="popup__to-close btn-is-disabled"></button>
+          <img class="popup__img" src="img/gimages1_320.jpg" alt="" data-target="gimgage1_320">
+          <img class="popup__img" src="img/gimages2_320.jpg" alt="" data-target="gimgage2_320">
+          <img class="popup__img" src="img/gimages3_320.jpg" alt="" data-target="gimgage3_320">
+          <img class="popup__img" src="img/gimages4_320.jpg" alt="" data-target="gimgage4_320">
+          <img class="popup__img" src="img/gimages5_320.jpg" alt="" data-target="gimgage5_320">
+          <img class="popup__img" src="img/gimages6_320.jpg" alt="" data-target="gimgage6_320">
+          <img class="popup__img" src="img/gimages7_320.jpg" alt="" data-target="gimgage7_320">
+          <img class="popup__img" src="img/gimages8_320.jpg" alt="" data-target="gimgage8_320">
+          <img class="popup__img" src="img/gimages9_320.jpg" alt="" data-target="gimgage9_320">
+          <img class="popup__img" src="img/gimages10_320.jpg" alt="" data-target="gimgage10_320">
+          <img class="popup__img" src="img/gimages11_320.jpg" alt="" data-target="gimgage11_320">
+          <img class="popup__img" src="img/gimages12_320.jpg" alt="" data-target="gimgage12_320">
+          <img class="popup__img" src="img/gimages13_320.jpg" alt="" data-target="gimgage13_320">
+          <img class="popup__img" src="img/gimages14_320.jpg" alt="" data-target="gimgage14_320">
+          <img class="popup__img" src="img/gimages15_320.jpg" alt="" data-target="gimgage15_320">
+          <img class="popup__img" src="img/gimages16_320.jpg" alt="" data-target="gimgage16_320">
+          <img class="popup__img" src="img/gimages17_320.jpg" alt="" data-target="gimgage17_320">
+          <img class="popup__img" src="img/gimages18_320.jpg" alt="" data-target="gimgage18_320">
+          <img class="popup__img" src="img/gimages19_320.jpg" alt="" data-target="gimgage19_320">
+          <img class="popup__img" src="img/gimages20_320.jpg" alt="" data-target="gimgage20_320">
+          <img class="popup__img" src="img/gimages21_320.jpg" alt="" data-target="gimgage21_320">
+          <img class="popup__img" src="img/gimages22_320.jpg" alt="" data-target="gimgage22_320">
+          <img class="popup__img" src="img/gimages23_320.jpg" alt="" data-target="gimgage23_320">
+          <img class="popup__img" src="img/gimages24_320.jpg" alt="" data-target="gimgage24_320">
+          <img class="popup__img" src="img/gimages1_720.jpg" alt="" data-target="gimgage1_720">
+          <img class="popup__img" src="img/gimages2_720.jpg" alt="" data-target="gimgage2_720">
+          <img class="popup__img" src="img/gimages3_720.jpg" alt="" data-target="gimgage3_720">
+          <img class="popup__img" src="img/gimages4_720.jpg" alt="" data-target="gimgage4_720">
+          <img class="popup__img" src="img/gimages5_720.jpg" alt="" data-target="gimgage5_720">
+          <img class="popup__img" src="img/gimages6_720.jpg" alt="" data-target="gimgage6_720">
+          <img class="popup__img" src="img/gimages7_720.jpg" alt="" data-target="gimgage7_720">
+          <img class="popup__img" src="img/gimages8_720.jpg" alt="" data-target="gimgage8_720">
+          <img class="popup__img" src="img/gimages9_720.jpg" alt="" data-target="gimgage9_720">
+          <img class="popup__img" src="img/gimages10_720.jpg" alt="" data-target="gimgage10_720">
+          <img class="popup__img" src="img/gimages11_720.jpg" alt="" data-target="gimgage11_720">
+          <img class="popup__img" src="img/gimages12_720.jpg" alt="" data-target="gimgage12_720">
+          <img class="popup__img" src="img/gimages13_720.jpg" alt="" data-target="gimgage13_720">
+          <img class="popup__img" src="img/gimages14_720.jpg" alt="" data-target="gimgage14_720">
+          <img class="popup__img" src="img/gimages15_720.jpg" alt="" data-target="gimgage15_720">
+          <img class="popup__img" src="img/gimages16_720.jpg" alt="" data-target="gimgage16_720">
+          <img class="popup__img" src="img/gimages17_720.jpg" alt="" data-target="gimgage17_720">
+          <img class="popup__img" src="img/gimages18_720.jpg" alt="" data-target="gimgage18_720">
+          <img class="popup__img" src="img/gimages19_720.jpg" alt="" data-target="gimgage19_720">
+          <img class="popup__img" src="img/gimages20_720.jpg" alt="" data-target="gimgage20_720">
+          <img class="popup__img" src="img/gimages21_720.jpg" alt="" data-target="gimgage21_720">
+          <img class="popup__img" src="img/gimages22_720.jpg" alt="" data-target="gimgage22_720">
+          <img class="popup__img" src="img/gimages23_720.jpg" alt="" data-target="gimgage23_720">
+          <img class="popup__img" src="img/gimages24_720.jpg" alt="" data-target="gimgage24_720">
+          <img class="popup__img" src="img/gimages1_1024.jpg" alt="" data-target="gimgage1_1024">
+          <img class="popup__img" src="img/gimages2_1024.jpg" alt="" data-target="gimgage2_1024">
+          <img class="popup__img" src="img/gimages3_1024.jpg" alt="" data-target="gimgage3_1024">
+          <img class="popup__img" src="img/gimages4_1024.jpg" alt="" data-target="gimgage4_1024">
+          <img class="popup__img" src="img/gimages5_1024.jpg" alt="" data-target="gimgage5_1024">
+          <img class="popup__img" src="img/gimages6_1024.jpg" alt="" data-target="gimgage6_1024">
+          <img class="popup__img" src="img/gimages7_1024.jpg" alt="" data-target="gimgage7_1024">
+          <img class="popup__img" src="img/gimages8_1024.jpg" alt="" data-target="gimgage8_1024">
+          <img class="popup__img" src="img/gimages9_1024.jpg" alt="" data-target="gimgage9_1024">
+          <img class="popup__img" src="img/gimages10_1024.jpg" alt="" data-target="gimgage10_1024">
+          <img class="popup__img" src="img/gimages11_1024.jpg" alt="" data-target="gimgage11_1024">
+          <img class="popup__img" src="img/gimages12_1024.jpg" alt="" data-target="gimgage12_1024">
+          <img class="popup__img" src="img/gimages13_1024.jpg" alt="" data-target="gimgage13_1024">
+          <img class="popup__img" src="img/gimages14_1024.jpg" alt="" data-target="gimgage14_1024">
+          <img class="popup__img" src="img/gimages15_1024.jpg" alt="" data-target="gimgage15_1024">
+          <img class="popup__img" src="img/gimages16_1024.jpg" alt="" data-target="gimgage16_1024">
+          <img class="popup__img" src="img/gimages17_1024.jpg" alt="" data-target="gimgage17_1024">
+          <img class="popup__img" src="img/gimages18_1024.jpg" alt="" data-target="gimgage18_1024">
+          <img class="popup__img" src="img/gimages19_1024.jpg" alt="" data-target="gimgage19_1024">
+          <img class="popup__img" src="img/gimages20_1024.jpg" alt="" data-target="gimgage20_1024">
+          <img class="popup__img" src="img/gimages21_1024.jpg" alt="" data-target="gimgage21_1024">
+          <img class="popup__img" src="img/gimages22_1024.jpg" alt="" data-target="gimgage22_1024">
+          <img class="popup__img" src="img/gimages23_1024.jpg" alt="" data-target="gimgage23_1024">
+          <img class="popup__img" src="img/gimages24_1024.jpg" alt="" data-target="gimgage24_1024">
+          <label class="popup__img-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus laudantium, culpa aperiam, non veniam enim neque asperiores perspiciatis dolorem vero quos accusamus itaque esse dolor, rerum nostrum recusandae dolorum maiores.
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog__container container">
+        <div class="catalog__hat">
+          <h2 class="catalog__header section-header" id="catalog">Каталог</h2>
+          <ul class="catalog__list-btns blanchard-list" aria-label="Список выбора страны автора">
+            <li class="catalog__btn catalog__btn-france">
+              <button class="catalog__button catalog__button-france" data-path="one" aria-label="Франция"></button>
+            </li>
+            <li class="catalog__btn catalog__btn-german">
+              <button class="catalog__button catalog__button-german" data-path="two" aria-label="Германия"></button>
+            </li>
+            <li class="catalog__btn catalog__btn-italy">
+              <button class="catalog__button catalog__button-italy catalog__button_active" data-path="three" aria-label="Италия"></button>
+            </li>
+            <li class="catalog__btn catalog__btn-russia">
+              <button class="catalog__button catalog__button-russia" data-path="four" aria-label="Россия"></button>
+            </li>
+            <li class="catalog__btn catalog__btn-belgee" >
+              <button class="catalog__button catalog__button-belgee" data-path="five" aria-label="Бельгия"></button>
+            </li>
+          </ul>
+          <p class="catalog__hat-par">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
+        </div>
+        <div class="catalog__info-block catalog__info-block-france" data-target="one">
+          <div class="catalog__list" id="accordion1">
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1400 по 1499 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                  <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                  <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+            </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1500 по 1599 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1600 по 1699 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1700 по 1799 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1800 по 1899 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1900 по 1999 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 2000 г.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__info-block catalog__info-block-german" data-target="two">
+          <div class="catalog__list" id="accordion2">
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1400 по 1499 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                  <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                  <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                </svg>
+              <div class="empty__block">
+                <h4 class="empty__header">Здесь пока пусто</h4>
+                <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                <a href="#" class="empty__link blanchard-link">В галерею</a>
+              </div>
+            </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1500 по 1599 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1600 по 1699 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1700 по 1799 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1800 по 1899 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1900 по 1999 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 2000 г.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__info-block catalog__info-block-italy catalog__info-block_active" data-target="three">
+          <div class="catalog__list" id="accordion3">
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1400 по 1499 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <p class="catalog__name" tabindex="0" data-path="name1">Бенедетто ди Биндо</p>
+              <p class="catalog__name" tabindex="0" data-path="name2">Бергоньоне, Амброджо</p>
+              <p class="catalog__name" tabindex="0" data-path="name3">Биссоло, Франческо</p>
+              <p class="catalog__name" tabindex="0" data-path="name4">Больтраффио, Джованни</p>
+              <p class="catalog__name" tabindex="0" data-path="name5">Бонсиньори, Франческо</p>
+              <p class="catalog__name" tabindex="0" data-path="name6">Боттичини, Рафаэлло</p>
+              <p class="catalog__name" tabindex="0" data-path="name7">Брамантино</p>
+              <p class="catalog__name" tabindex="0" data-path="name8">Бреа, Людовико</p>
+              <p class="catalog__name" tabindex="0" data-path="name9">Бьяджо д’Антонио Туччи</p>
+              <p class="catalog__name" tabindex="0" data-path="name10">Веккьетта</p>
+              <p class="catalog__name" tabindex="0" data-path="name11">Андреа Верроккьо</p>
+              <p class="catalog__name" tabindex="0" data-path="name12">Доменико Гирландайо</p>
+              <p class="catalog__name" tabindex="0" data-path="name13">Беноццо Гоццоли</p>
+              <p class="catalog__name" tabindex="0" data-path="name14">Граначчи, Франческо</p>
+              <p class="catalog__name" tabindex="0" data-path="name15">Грегорио ди Чекко</p>
+              <p class="catalog__name" tabindex="0" data-path="name16">Джованни да Удине</p>
+              <p class="catalog__name" tabindex="0" data-path="name17">Джованни ди Паоло</p>
+              <p class="catalog__name" tabindex="0" data-path="name18">Джорджоне</p>
+              <p class="catalog__name" tabindex="0" data-path="name19">Парентино, Бернардо</p>
+              <p class="catalog__name" tabindex="0" data-path="name20">Пезеллино</p>
+              <p class="catalog__name" tabindex="0" data-path="name21">Пьетро Перуджино</p>
+              <p class="catalog__name" tabindex="0" data-path="name22">Перуцци, Бальдассаре</p>
+              <p class="catalog__name" tabindex="0" data-path="name23">Пизанелло</p>
+              <p class="catalog__name" tabindex="0" data-path="name24">Пинтуриккьо</p>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1500 по 1599 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1600 по 1699 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1700 по 1799 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1800 по 1899 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1900 по 1999 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 2000 г.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name1">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name2">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name3">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name4">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name5">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name6">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name7">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name8">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name9">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name10">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name11">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block catalog__person-block_active" data-target="name12">
+            <img src="img/domenico.jpg" alt="" class="catalog__person-image">
+            <h4 class="catalog__person-name">Доменико Гирландайо</h4>
+            <p class="catalog__person-dates">2 июня 1448 — 11 января 1494.</p>
+            <p class="catalog__person-description">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name13">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name14">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name15">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name16">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name17">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name18">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name19">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name20">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name21">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name22">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name23">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+          <div class="catalog__person-block person-empty" data-target="name24">
+            <img src="img/person-empty.jpg" alt="" class="person-empty__image">
+            <h4 class="person-empty__header">Что мы о нём знаем?</h4>
+            <p class="person-empty__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
+            <a href="#" class="person-empty__link blanchard-link">В галлерею</a>
+          </div>
+        </div>
+        <div class="catalog__info-block catalog__info-block-russia" data-target="four">
+          <div class="catalog__list" id="accordion4">
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1400 по 1499 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                  <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                  <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                </svg>
+              <div class="empty__block">
+                <h4 class="empty__header">Здесь пока пусто</h4>
+                <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                <a href="#" class="empty__link blanchard-link">В галерею</a>
+              </div>
+            </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1500 по 1599 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1600 по 1699 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1700 по 1799 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1800 по 1899 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1900 по 1999 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 2000 г.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__info-block catalog__info-block-belgy" data-target="five">
+          <div class="catalog__list" id="accordion5">
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1400 по 1499 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                  <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                  <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                </svg>
+              <div class="empty__block">
+                <h4 class="empty__header">Здесь пока пусто</h4>
+                <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                <a href="#" class="empty__link blanchard-link">В галерею</a>
+              </div>
+            </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1500 по 1599 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1600 по 1699 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1700 по 1799 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1800 по 1899 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 1900 по 1999 гг.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+            <h3 class="catalog__list-header">
+              <span class="catalog__list-header-content">
+                С 2000 г.
+              </span>
+            </h3>
+            <div class="catalog__list-info">
+              <div class="catalog__empty-item empty">
+                  <svg class="empty__image" width="90" height="130" viewbox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <rect x="89" y="1" width="128" height="88" transform="rotate(90 89 1)" stroke="#B7B7B7" stroke-width="2"/>
+                    <rect x="84" y="6" width="118" height="79" transform="rotate(90 84 6)" fill="#B7B7B7"/>
+                  </svg>
+                <div class="empty__block">
+                  <h4 class="empty__header">Здесь пока пусто</h4>
+                  <p class="empty__par">А в галерее вы всегда можете найти что-то интересное для себя</p>
+                  <a href="#" class="empty__link blanchard-link">В галерею</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <div class="events__container container">
+        <h2 class="events__header section-header" id="events">События</h2>
+        <div class="swiper-container3 events__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper events__swiper-wrapper">
+            <!-- Slides -->
+            <div class="events__swiper-slide swiper-slide events__swiper-slide-1">
+              <div class="events__block event">
+                <img src="img/event1.jpg" alt="" class="event__image">
+                <div class="event__info">
+                  <div class="event__info-top">
+                    <address class="event__adress">Музей им. Щусева <br> с 20 марта по 30 апреля</address>
+                    <h4 class="event__header">Книжная гравюра в живом восприятии</h4>
+                  </div>
+                  <p class="event__par">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                  <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="events__swiper-slide swiper-slide events__swiper-slide-2">
+              <div class="events__block event">
+                <img src="img/event2.jpg" alt="" class="event__image">
+                <div class="event__info">
+                  <div class="event__info-top">
+                    <address class="event__adress">ММОМА<br> 24 марта 19:00 </address>
+                    <h4 class="event__header">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
+                  </div>
+                  <p class="event__par">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                  <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="events__swiper-slide swiper-slide events__swiper-slide-3">
+              <div class="events__block event">
+                <img src="img/event3.jpg" alt="" class="event__image">
+                <div class="event__info">
+                  <div class="event__info-top">
+                    <address class="event__adress">Еврейский музей<br> с 31 марта по 21 апреля</address>
+                    <h4 class="event__header">Выставка «Формация 2020»</h4>
+                  </div>
+                  <p class="event__par">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                  <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="events__swiper-slide swiper-slide events__swiper-slide-4">
+              <div class="events__block event">
+                <img src="img/event4.jpg" alt="" class="event__image">
+                <div class="event__info">
+                  <div class="event__info-top">
+                    <address class="event__adress">Третьяковка на Крымском валу <br> с 30 марта по 30 апреля</address>
+                    <h4 class="event__header">XXIV Международная биеннале молодого искусства</h4>
+                  </div>
+                  <p class="event__par">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+                  <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="events__swiper-slide swiper-slide events__swiper-slide-5">
+              <div class="events__block event">
+                <img src="img/event5.jpg" alt="" class="event__image">
+                <div class="event__info">
+                  <div class="event__info-top">
+                    <address class="event__adress">ММАМ<br> 8 апреля по 20 мая</address>
+                    <h4 class="event__header">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
+                  </div>
+                  <p class="event__par">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                  <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="events__swiper-pagination swiper-pagination"></div>
+        </div>
+        <ul class="events__list blanchard-list">
+          <li class="events__block event event_active">
+            <picture class="events__images-container">
+              <source srcset="img/event1_1920.jpg" media="(min-width:1440px)">
+              <img src="img/event1.jpg" alt="" class="event__image">
+            </picture>
+            <div class="event__info">
+              <div class="event__info-top">
+                <address class="event__adress">Музей им. Щусева <br> с 20 марта по 30 апреля</address>
+                <h4 class="event__header">Книжная гравюра в живом восприятии</h4>
+              </div>
+              <p class="event__par">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+              <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+            </div>
+          </li>
+          <li class="events__block event event_active">
+            <picture class="events__images-container">
+              <source srcset="img/event2_1920.jpg" media="(min-width:1440px)">
+              <img src="img/event2.jpg" alt="" class="event__image">
+            </picture>
+            <div class="event__info">
+              <div class="event__info-top">
+                <address class="event__adress">ММОМА<br> 24 марта 19:00 </address>
+                <h4 class="event__header">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h4>
+              </div>
+              <p class="event__par">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+              <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+            </div>
+          </li>
+          <li class="events__block event event_active-s">
+            <picture class="events__images-container">
+              <source srcset="img/event3_1920.jpg" media="(min-width:1440px)">
+              <img src="img/event3.jpg" alt="" class="event__image">
+            </picture>
+            <div class="event__info">
+              <div class="event__info-top">
+                <address class="event__adress">Еврейский музей<br> с 31 марта по 21 апреля</address>
+                <h4 class="event__header">Выставка «Формация 2020»</h4>
+              </div>
+              <p class="event__par">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+              <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+            </div>
+          </li>
+          <li class="events__block event">
+            <picture class="events__images-container">
+              <source srcset="img/event4_1920.jpg" media="(min-width:1440px)">
+              <img src="img/event4.jpg" alt="" class="event__image">
+            </picture>
+            <div class="event__info">
+              <div class="event__info-top">
+                <address class="event__adress">Третьяковка на Крымском валу <br> с 30 марта по 30 апреля</address>
+                <h4 class="event__header">XXIV Международная биеннале молодого искусства</h4>
+              </div>
+              <p class="event__par">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+              <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+            </div>
+          </li>
+          <li class="events__block event">
+            <picture class="events__images-container">
+              <source srcset="img/event5_1920.jpg" media="(min-width:1440px)">
+              <img src="img/event5.jpg" alt="" class="event__image">
+            </picture>
+            <div class="event__info">
+              <div class="event__info-top">
+                <address class="event__adress">ММАМ<br> 8 апреля по 20 мая</address>
+                <h4 class="event__header">Джон Винзор. Фотографии из серии «Метафора серебра»</h4>
+              </div>
+              <p class="event__par">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+              <a href="#" class="event__link blanchard-link" aria-label="Подробнее о событии">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+        <button class="events__btn events__btn_active blanchard-link-btn" tabindex="0">Все события</button>
+      </div>
+    </section>
+
+    <section class="editions">
+      <div class="editions__container container">
+        <h2 class="editions__header section-header" id="editions">Издания</h2>
+        <div class="editions__categorys">
+          <h4 class="editions__filtre-header">Категории</h4>
+             <ul class="editions__filtres-list blanchard-list">
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Бестселлеры</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Искусство</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Архитектура</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check" checked>
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Дизайн</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Мода</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Детям</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Художественная литература</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Публицистика</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Путеводители</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Философия</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Учебная литература</span>
+                </label>
+              </li>
+              <li class="editions__filtre filtre-check">
+                <label class="filtre-check__label-check">
+                  <input type="checkbox" class="filtre-check__check">
+                  <span class="filtre-check__checkbox"></span>
+                  <span class="filtre-check__checkbox-name">Журналы и газеты</span>
+                </label>
+              </li>
+            </ul>
+        </div>
+        <div class="editions__price-block">
+          <h4 class="editions__price-header">Цена</h4>
+          <div class="editions__price-filtre">
+            <span class="editions__price-min">От</span>
+            <input type="text" class="editions__price-min-input" placeholder="50" aria-label="Фильтр по цене. Поле для ввода минимальной цены">
+            <span class="editions__price-max">до</span>
+            <input type="text" class="editions__price-max-input" placeholder="25 000" aria-label="Фильтр по цене. Поле для ввода максимальной цены">
+            <span class="editions__price-rub">руб.</span>
+          </div>
+        </div>
+        <ul class="editions__list blanchard-list">
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions1.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Искусство цвета</h5>
+                <p class="edition__author">Иттен, Иоханнес</p>
+                <p class="edition__price">620руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions4.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Типографика</h5>
+                <p class="edition__author">Рудер, Эмиль</p>
+                <p class="edition__price">2 450руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions6.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Книга про буквы</h5>
+                <p class="edition__author">Гордон, Юрий</p>
+                <p class="edition__price">2 200руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions5.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Николай Ильин</h5>
+                <p class="edition__author">Кричевский, Влади...</p>
+                <p class="edition__price">1 100руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions2.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Модульные сетки...</h5>
+                <p class="edition__author">Мюллер-Брокманн...</p>
+                <p class="edition__price">1 450руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions7.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Эволюция графич...</h5>
+                <p class="edition__author">Хеллер, Чваст</p>
+                <p class="edition__price">3 200руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+          <li class="editions__item edition">
+            <div class="edition__top">
+            <img src="img/editions3.jpg" alt="" class="edition__image">
+              <div class="edition__info">
+                <h5 class="edition__name">Искусство и визуа...</h5>
+                <p class="edition__author">Арнхейм, Рудольф</p>
+                <p class="edition__price">2 200руб</p>
+              </div>
+            </div>
+            <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+          </li>
+        </ul>
+        <div class="editions__swiper-container">
+          <div class="editions__swiper-wrapper swiper-wrapper">
+            <div class="editions__swiper-slide swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition1_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Искусство цвета</h5>
+                    <p class="edition__author">Иттен, Иоханнес</p>
+                  </div>
+                  <p class="edition__price">620руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition2_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Типографика</h5>
+                    <p class="edition__author">Рудер, Эмиль</p>
+                  </div>
+                  <p class="edition__price">2 450 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition3_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Книга про буквы</h5>
+                    <p class="edition__author">Гордон, Юрий</p>
+                  </div>
+                  <p class="edition__price">2 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition4_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Николай Ильин</h5>
+                    <p class="edition__author">Кричевский, Владимир</p>
+                  </div>
+                  <p class="edition__price">1 100 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition5_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Модульные сетки в граф...</h5>
+                    <p class="edition__author">Мюллер-Брокманн, Йозеф</p>
+                  </div>
+                  <p class="edition__price">1 450 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition6_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Эволюция графических ст...</h5>
+                    <p class="edition__author">Хеллер, Чваст</p>
+                  </div>
+                  <p class="edition__price">3 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition7_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Искусство и визуальное в...</h5>
+                    <p class="edition__author">Арнхейм, Рудольф</p>
+                  </div>
+                  <p class="edition__price">2 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide editions__swiper-slide-lg swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition1_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Искусство цвета</h5>
+                    <p class="edition__author">Иттен, Иоханнес</p>
+                  </div>
+                  <p class="edition__price">620руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition2_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Типографика </h5>
+                    <p class="edition__author">Рудер, Эмиль</p>
+                  </div>
+                  <p class="edition__price">2 450 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition3_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Книга про буквы</h5>
+                    <p class="edition__author">Гордон, Юрий</p>
+                  </div>
+                  <p class="edition__price">2 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide editions__swiper-slide-lg swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition4_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Николай Ильин </h5>
+                    <p class="edition__author">Кричевский, Владимир</p>
+                  </div>
+                  <p class="edition__price">1 100 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition5_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Модульные сетки в граф... </h5>
+                    <p class="edition__author">Мюллер-Брокманн, Йозеф</p>
+                  </div>
+                  <p class="edition__price">1 450 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+              <div class="editions__item edition">
+                <img src="img/edition6_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Эволюция графических ст...</h5>
+                    <p class="edition__author">Хеллер, Чваст</p>
+                  </div>
+                  <p class="edition__price">3 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="editions__swiper-slide editions__swiper-slide-lg swiper-slide">
+              <div class="editions__item edition">
+                <img src="img/edition7_768.jpg" alt="" class="edition__image">
+                <div class="edition__info">
+                  <div class="edition__info-top">
+                    <div class="edition__info-top-left">
+                    <h5 class="edition__name">Искусство и визуальное в... </h5>
+                    <p class="edition__author">Арнхейм, Рудольф</p>
+                  </div>
+                  <p class="edition__price">2 200 руб</p>
+                  </div>
+                    <a href="#" class="edition__link blanchard-link-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editions__swiper-buttons-block">
+            <div class="editions__swiper-pagination swiper-pagination"></div>
+            <div class="editions__swiper-button-prev swiper-button-prev"></div>
+            <div class="editions__swiper-button-next swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="projects__container container">
+        <h2 class="projects__header section-header" id="projects">Проекты</h2>
+        <p class="projects__par">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское<span class="projects__tooltip projects__tooltip1" tabindex="0"><svg class="projects__tooltip-image" width="2" height="10" viewbox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/></svg></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены   <span class="projects__tooltip projects__tooltip2" tabindex="0"><svg class="projects__tooltip-image" width="2" height="10" viewbox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/></svg></span>   исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip projects__tooltip3" tabindex="0"><svg class="projects__tooltip-image" width="2" height="10" viewbox="0 0 2 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" fill="black"/></svg></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" class="projects__link blanchard-link">blanchard-art.ru/projects/about</a></p>
+      </div>
+    </section>
+
+    <section class="partners">
+      <div class="partners__container container">
+        <h4 class="partners__header section-header">
+          Партнёры проектов:
+        </h4>
+        <div class="swiper-container4 partners__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper partners__swiper-wrapper">
+            <!-- Slides -->
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners1.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners2.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners3.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners4.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners5.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners6.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners7.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners8.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidem  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners9.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidesm  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners1.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners2.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidesm  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners3.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners4.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidesm  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners5.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners6.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidesm  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners7.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners8.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidesm  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners9.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidelg  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners1.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners2.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners3.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidelg  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners4.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners5.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners6.png" alt="" class="partners__logo">
+              </div>
+            </div>
+            <div class="partners__swiper-slide partners__swiper-slidelg  swiper-slide">
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners7.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners8.png" alt="" class="partners__logo">
+              </div>
+              <div class="partners__slide-content" tabindex="0" aria-label="Логотип партнеров">
+                <img src="img/partners9.png" alt="" class="partners__logo">
+              </div>
+            </div>
+          </div>
+           <!-- If we need navigation buttons -->
+            <div class="partners__swiper-button-prev swiper-button-prev"></div>
+            <div class="partners__swiper-button-next swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts__container container">
+        <h2 class="contacts__header section-header" id="contacts">Контакты</h2>
+        <div class="contacts__content">
+          <div class="contacts__hat">
+            <h4 class="contacts__placename">Шоурум №2</h4>
+            <address class="contacts__address">Леонтьевский переулок, дом 5/1</address>
+          </div>
+          <div class="contacts__map">
+            <div id="map" style="width: 2000px;"></div>
+          </div>
+          <form action="https://jsonplaceholder.typicode.com/posts" class="contacts__form">
+            <fieldset class="contacts__fieldset">
+              <legend class="contacts__form-legend">Заказать обратный звонок</legend>
+              <div class="just-validate-tooltip-container">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Имя*"
+                  data-validate-field="name"
+                  class="contacts__input">
+              </div>
+              <div class="just-validate-tooltip-container">
+                <input
+                  type="tel"
+                  name="tel"
+                  placeholder="Телефон*"
+                  data-validate-field="tel"
+                  data-validate-rules="phone"
+                  class="contacts__input">
+              </div>
+              <button type="submit" class="contacts__form-btn blanchard-link-btn" aria-label="Кнопка для отправки данных">Заказать</button>
+            </fieldset>
+          </form>
+          <div class="contacts__one-click">
+            <h4 class="contacts__header-oc">Связаться в один клик</h4>
+            <ul class="contacts__social-list blanchard-list">
+              <li class="contacts__social-item">
+                <a href="#" aria-label="Мы в Whatsup" class="contacts__social-link contacts__social-link-wup">
+                  <svg class="contacts__social-image" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M25 49.2188C38.3756 49.2188 49.2188 38.3756 49.2188 25C49.2188 11.6244 38.3756 0.78125 25 0.78125C11.6244 0.78125 0.78125 11.6244 0.78125 25C0.78125 38.3756 11.6244 49.2188 25 49.2188Z" fill="#30BF39"/>
+                    <path d="M32.3438 27.1885C32.0313 27.0322 30.3906 26.0947 30.0781 26.0166C29.7656 25.8603 29.5313 25.8603 29.2969 26.1728C29.0625 26.4853 28.3594 27.2666 28.2031 27.4228C27.9688 27.6572 27.8125 27.6572 27.5 27.501C27.1875 27.3447 26.0938 26.9541 24.8438 25.7041C23.9063 24.7666 23.2031 23.6728 23.0469 23.2822C22.8906 22.9697 23.0469 22.7353 23.2031 22.5791C23.3594 22.4228 23.5156 22.1885 23.75 22.0322C23.9844 21.876 23.9844 21.7197 24.1406 21.4854C24.2969 21.251 24.2188 21.0947 24.1406 20.8604C24.0625 20.626 23.4375 18.9854 23.2031 18.2822C22.9688 17.5791 22.6563 17.7354 22.5 17.6572C22.2656 17.6572 22.1094 17.5791 21.875 17.5791C21.5625 17.5791 21.1719 17.7354 20.9375 17.9697C20.625 18.2822 19.6875 19.0635 19.6875 20.7041C19.6875 22.3447 20.7813 24.0635 20.9375 24.2197C21.0938 24.4541 23.125 28.0478 26.4844 29.5322C29.8438 31.0166 29.8438 30.5478 30.4688 30.5478C31.0938 30.5478 32.5 29.7666 32.8125 29.0635C33.125 28.2822 33.125 27.5791 33.0469 27.501C32.8906 27.501 32.6563 27.4228 32.3438 27.1885ZM26.0938 35.2353C23.9063 35.2353 21.875 34.6103 20.0781 33.4385L15.8594 34.7666L17.2656 30.7041C15.9375 28.8291 15.1562 26.5635 15.1562 24.2197C15.1562 18.126 20.0781 13.2041 26.1719 13.2041C32.2656 13.2041 37.1094 18.126 37.1094 24.2197C37.1094 30.3135 32.1875 35.2353 26.0938 35.2353ZM26.0938 11.0166C18.8281 11.0166 12.8906 16.9541 12.8906 24.2197C12.8906 26.6416 13.5156 28.9853 14.7656 31.0166L12.3438 38.126L19.6875 35.7822C21.6406 36.876 23.8281 37.4229 26.0938 37.4229C33.3594 37.4229 39.2969 31.4853 39.2969 24.2197C39.2969 16.9541 33.4375 11.0166 26.0938 11.0166Z" fill="white"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__social-item">
+                <a href="#" aria-label="Мы в Telegram" class="contacts__social-link contacts__social-link-tg">
+                  <svg class="contacts__social-image" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                    <path d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z" fill="url(#paint0_linear)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3176 24.7359L25.8971 18.4559C32.8399 15.5681 34.2825 15.0665 35.2228 15.05C35.4297 15.0463 35.8921 15.0976 36.1916 15.3406C36.4446 15.5458 36.5141 15.8231 36.5474 16.0176C36.5808 16.2121 36.6222 16.6555 36.5892 17.0018C36.213 20.9548 34.585 30.548 33.7568 34.9755C33.4063 36.849 32.7168 37.4772 32.0483 37.5386C30.5965 37.6722 29.4941 36.5791 28.0879 35.6574L22.5087 31.9098C20.0404 30.2833 21.6405 29.3893 23.0472 27.9283C23.4153 27.5458 29.812 21.7276 29.9357 21.1998C29.9507 21.1338 29.9656 20.8878 29.8194 20.7578C29.6733 20.6278 29.4574 20.6728 29.3018 20.7076C29.0811 20.7577 25.5661 23.081 18.7567 27.6776C17.7589 28.3628 16.8552 28.6966 16.0455 28.6791C15.1529 28.6598 13.4358 28.1744 12.1594 27.7595C10.5937 27.2506 9.34935 26.9815 9.45775 26.1172C9.51415 25.667 10.1341 25.2067 11.3176 24.736L11.3176 24.7359Z" fill="white"/>
+                    <defs>
+                    <lineargradient id="paint0_linear" x1="25" y1="0" x2="25" y2="49.6292" gradientunits="userSpaceOnUse"><stop offset stop-color="#2AABEE"/>
+                    <stop offset="1" stop-color="#229ED9"/>
+                    </lineargradient>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="blanchard-footer">
+    <div class="footer">
+      <div class="footer__container container">
+        <a href="#" class="footer__logo-link" aria-label="Ссылка на главную страницу">
+          <img src="img/logo.svg" alt="Логотип Blanchard" class="footer__logo-image">
+        </a>
+        <ul class="footer__list blanchard-list">
+          <li class="footer__item">
+            <a href="#" class="footer__social-link" aria-label="Мы в ВКонтакте">
+              <svg class="footer__social-image footer__social-image-vk" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                <path d="M25 0C11.1933 0 0 11.1928 0 25C0 38.8072 11.1933 50 25 50C38.8066 50 50 38.8072 50 25C50 11.1928 38.8066 0 25 0ZM37.6813 27.7038C38.8465 28.8419 40.0793 29.913 41.1253 31.1688C41.5887 31.7243 42.0256 32.2987 42.3581 32.9448C42.8327 33.866 42.4041 34.8762 41.5795 34.9309L36.4578 34.9299C35.135 35.0394 34.0824 34.5059 33.1949 33.6015C32.4864 32.8808 31.8292 32.111 31.1468 31.3657C30.868 31.0598 30.5744 30.7719 30.2246 30.5453C29.5263 30.091 28.9197 30.2302 28.5197 30.9596C28.112 31.7018 28.0189 32.5243 27.9801 33.3504C27.9243 34.5581 27.5601 34.8737 26.3483 34.9304C23.7591 35.0517 21.3023 34.6588 19.0189 33.3535C17.0046 32.202 15.4455 30.577 14.087 28.7371C11.4414 25.1504 9.41535 21.2138 7.59488 17.1642C7.18517 16.2522 7.48491 15.7642 8.49105 15.7453C10.1627 15.713 11.8343 15.7171 13.5059 15.7437C14.1862 15.7545 14.6363 16.1437 14.8977 16.7857C15.801 19.0082 16.9084 21.1228 18.2962 23.0839C18.666 23.6061 19.0435 24.1269 19.5811 24.4957C20.1744 24.9028 20.6266 24.7683 20.9064 24.1059C21.0854 23.6849 21.1627 23.2348 21.2015 22.7836C21.3345 21.2384 21.3504 19.6936 21.1202 18.1545C20.977 17.1913 20.4353 16.5693 19.4752 16.3872C18.9862 16.2946 19.0578 16.1136 19.2957 15.8343C19.7084 15.3514 20.0951 15.0527 20.868 15.0527L26.6547 15.0517C27.5668 15.2307 27.7714 15.6399 27.8951 16.5586L27.9003 22.9893C27.8895 23.3448 28.0788 24.3985 28.7171 24.6312C29.2286 24.8 29.5662 24.3898 29.8721 24.066C31.2598 22.5933 32.2486 20.8552 33.134 19.0563C33.5248 18.2629 33.8619 17.4419 34.1893 16.6194C34.4327 16.0113 34.8113 15.712 35.4977 15.7222L41.0701 15.7289C41.2343 15.7289 41.401 15.7304 41.5637 15.7586C42.5028 15.9192 42.7601 16.3233 42.4696 17.2394C42.0123 18.6788 41.1238 19.8777 40.2552 21.0798C39.3243 22.3668 38.3315 23.6087 37.4097 24.9013C36.5627 26.0829 36.6297 26.6777 37.6813 27.7038Z" fill="#CACACA"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__social-link" aria-label="Мы в Instagram">
+              <svg class="footer__social-image footer__social-image-ig" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                <path d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z" fill="#CACACA"/>
+                <path d="M13.8096 16.5338C14.0397 15.9105 14.4066 15.3463 14.8835 14.8832C15.3466 14.4064 15.9104 14.0394 16.5341 13.8094C17.0399 13.6129 17.7998 13.3791 19.1994 13.3154C20.7135 13.2463 21.1674 13.2314 25.0004 13.2314C28.8338 13.2314 29.2878 13.2459 30.8014 13.315C32.201 13.3791 32.9613 13.6129 33.4668 13.8094C34.0905 14.0394 34.6547 14.4064 35.1174 14.8832C35.5942 15.3463 35.9612 15.9101 36.1916 16.5338C36.3881 17.0397 36.6219 17.7999 36.6856 19.1995C36.7547 20.7132 36.7695 21.1672 36.7695 25.0006C36.7695 28.8336 36.7547 29.2875 36.6856 30.8016C36.6219 32.2012 36.3881 32.9611 36.1916 33.4669C35.9612 34.0906 35.5946 34.6544 35.1178 35.1175C34.6547 35.5943 34.0909 35.9613 33.4671 36.1913C32.9613 36.3882 32.201 36.622 30.8014 36.6857C29.2878 36.7548 28.8342 36.7693 25.0008 36.7693C21.167 36.7693 20.7131 36.7548 19.1998 36.6857C17.8002 36.622 17.0399 36.3882 16.5341 36.1913C15.2821 35.7084 14.2926 34.7189 13.8096 33.4669C13.6132 32.9611 13.3793 32.2012 13.3152 30.8016C13.2462 29.2875 13.2317 28.8336 13.2317 25.0006C13.2317 21.1672 13.2462 20.7132 13.3152 19.1995C13.379 17.7999 13.6128 17.0397 13.8096 16.5338ZM25.0004 32.3717C29.0719 32.3717 32.3723 29.0716 32.3723 25.0002C32.3723 20.9287 29.0719 17.6286 25.0004 17.6286C20.9294 17.6286 17.6289 20.9287 17.6289 25.0002C17.6289 29.0716 20.9294 32.3717 25.0004 32.3717ZM17.3375 19.0599C18.2888 19.0599 19.0602 18.2886 19.0602 17.3372C19.0602 16.3858 18.2888 15.6145 17.3375 15.6145C16.3861 15.6145 15.6147 16.3858 15.6147 17.3372C15.6151 18.2886 16.3861 19.0599 17.3375 19.0599Z" fill="#CACACA"/>
+                <path d="M25 0C38.805 0 50 11.195 50 25C50 38.805 38.805 50 25 50C11.195 50 0 38.805 0 25C0 11.195 11.195 0 25 0ZM10.7311 30.9185C10.8006 32.4467 11.0435 33.49 11.3983 34.4032C12.1441 36.3316 13.6684 37.8559 15.5968 38.6017C16.5096 38.9565 17.5533 39.1991 19.0811 39.2689C20.612 39.3387 21.101 39.3555 24.9996 39.3555C28.8986 39.3555 29.3873 39.3387 30.9185 39.2689C32.4463 39.1991 33.49 38.9565 34.4028 38.6017C35.3611 38.2412 36.2286 37.6762 36.9457 36.9457C37.6759 36.2289 38.2408 35.3611 38.6013 34.4032C38.9561 33.4904 39.1991 32.4467 39.2685 30.9189C39.3391 29.3877 39.3555 28.8986 39.3555 25C39.3555 21.1014 39.3391 20.6123 39.2689 19.0815C39.1994 17.5533 38.9568 16.51 38.6021 15.5968C38.2416 14.6389 37.6762 13.7711 36.9457 13.0543C36.2289 12.3238 35.3611 11.7588 34.4032 11.3983C33.49 11.0435 32.4467 10.8009 30.9185 10.7311C29.3877 10.6613 28.8986 10.6445 25 10.6445C21.1014 10.6445 20.6123 10.6613 19.0815 10.7315C17.5533 10.8009 16.51 11.0435 15.5968 11.3979C14.6389 11.7584 13.7711 12.3238 13.0539 13.0543C12.3238 13.7714 11.7584 14.6389 11.3983 15.5968C11.0432 16.51 10.8006 17.5533 10.7307 19.0815C10.6609 20.6123 10.6445 21.1014 10.6445 25C10.6445 28.8986 10.6609 29.3877 10.7311 30.9185Z" fill="#CACACA"/>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__social-link" aria-label="Мы в Facebook. Последний элемент на странице.">
+              <svg class="footer__social-image footer__social-image-fb" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none">
+                <path d="M25 0C11.25 0 0 11.2701 0 25.1506C0 37.7008 9.14999 48.1175 21.1 50V32.4297H14.75V25.1506H21.1V19.6034C21.1 13.3032 24.825 9.83936 30.55 9.83936C33.275 9.83936 36.125 10.3163 36.125 10.3163V16.5161H32.975C29.875 16.5161 28.9 18.4488 28.9 20.4317V25.1506H35.85L34.725 32.4297H28.9V50C34.7911 49.0659 40.1555 46.048 44.0248 41.4911C47.8941 36.9342 50.0133 31.1387 49.9999 25.1506C49.9999 11.2701 38.75 0 25 0Z" fill="#CACACA"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

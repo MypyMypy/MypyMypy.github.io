@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("/fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Bold.woff2") format("woff2"), url("/fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.hero {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.hero__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+  min-height: 422px;
+  padding: 30px;
+  padding-right: 40px;
+  background-image: url(/images/hero_1_320.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero__author {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+.hero__card-main-title {
+  margin: 0;
+  font-family: "ttfirsneue";
+  font-size: 24px;
+  line-height: 110%;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero__link-more {
+  min-width: 115px;
+  max-width: 100%;
+  color: #fff;
+  font-weight: 700;
+  border: 3px solid #FF6E30;
+  background-color: transparent;
+  padding: 8px 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  background-color: #FF6E30;
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.hero__card-sub-titile {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: "ttfirsneue";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 104%;
+  color: #202020;
+}
+
+.hero__card-image img {
+  width: 100%;
+}
+/*# sourceMappingURL=hero.css.map */

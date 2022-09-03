@@ -1,0 +1,146 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.nav__link,
+.header__btn-search-open,
+.social__link,
+.hero__link-more,
+.about__form-btn,
+.contacts__form-btn,
+.project__btn,
+.burger span{
+  transition-property: transform, background-color, color, fill;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn-close {
+  cursor: pointer;
+  &:focus-visible {
+    background-color: $focusColor;
+  }
+}
+
+.logo:focus-visible {
+  outline: 1px solid $hoverColor;
+}
+
+.nav__link, .map-block__tel {
+  @include linkClick;
+}
+
+.nav__link:focus-visible {
+  outline: none;
+  &::before {
+    background-color: $focusColor;
+    z-index: -1;
+  }
+}
+
+.map-block__tel:focus-visible {
+  outline: none;
+  &::before {
+    left: 1px;
+    background-color: #fff;
+    z-index: -1;
+  }
+}
+
+.header__btn-search-open:focus-visible {
+  fill: $focusColor;
+}
+
+.social__link:focus-visible {
+  outline: none;
+  fill: $focusColor;
+}
+
+.hero__link-more:focus-visible,
+.about__form-btn:focus-visible,
+.contacts__form-btn:focus-visible {
+  outline: none;
+  border-color: $focusColor;
+}
+
+.project__btn:focus-visible {
+  outline: none;
+  border-color: $btnColor;
+  background-color: $focusColor;
+}
+
+.about__form-input:focus-visible,
+.contacts__form-input:focus-visible,
+.contacts__form-textarea:focus-visible {
+  outline: 1px solid $hoverColor;
+}
+
+.contacts__form-input.just-validate-error-field:focus-visible {
+  outline: 1px solid #ff3030;
+}
+
+.about__form-input.just-validate-error-field:focus-visible {
+  outline: 1px solid #F06666;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav__link:hover {
+    color: $hoverColor;
+  }
+
+  .header__btn-search-open:hover {
+    cursor: pointer;
+    fill: $hoverColor;
+  }
+
+  .social__link:hover {
+    fill: $hoverColor;
+  }
+
+  .hero__link-more:hover,
+  .about__form-btn:hover,
+  .contacts__form-btn:hover {
+    cursor: pointer;
+    background-color: $hoverfilledbtn;
+  }
+
+  .project__btn:hover {
+    cursor: pointer;
+    background-color: $hoverColor;
+  }
+}
+
+.burger span {
+  transform-origin: left;
+}
+
+.burger:active span{
+  background-color: $activeColor;
+  &:nth-child(3) {
+    transform: translateY(-100%) scaleX(2);
+  }
+}
+
+.nav__link:active {
+  color: $activeColor;
+}
+
+.header__btn-search-open:active {
+  fill: $activeColor;
+}
+
+.social__link:active {
+  fill: $activeColor;
+}
+
+.hero__link-more:active,
+.about__form-btn:active,
+.contacts__form-btn:active,
+.project__btn:active {
+  background-color: $activeColor;
+  border-color: $activeColor;
+}
+
+
+
+
+

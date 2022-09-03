@@ -1,0 +1,72 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.about {
+  background-color: $colorText;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  color: #fff;
+
+  &__title {
+    font-family: $fonttextTT;
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    margin: 0;
+    color: $colorTextLight;
+    font-size: $font-sizeText_sm;
+    line-height: 25px;
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    padding-top: 304px;
+    background-image: url(/images/about_320.png);
+    background-repeat: no-repeat;
+    background-size: 100% 278px;
+    background-position: top;
+  }
+
+  &__form-title {
+    font-family: $fonttextTT;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: 12px 23px;
+    border: none;
+    background-color: $colorTextMiddle;
+    margin-bottom: 20px;
+    color: #fff;
+
+      &::placeholder {
+        color: $colorTextLight;
+      }
+  }
+
+  &__form-input-container{
+    .just-validate-error-label {
+      color: #F06666;
+    }
+  }
+
+  &__form-btn {
+    @include btnreset;
+    @include pagebtn(10px 20px);
+    background-color: $btnColor;
+    width: fit-content;
+    font-size: $font-sizeText_sm;
+  }
+}

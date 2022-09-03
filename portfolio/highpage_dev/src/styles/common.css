@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("/fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Bold.woff2") format("woff2"), url("/fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input, textarea {
+  border-radius: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.page {
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1352px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-type {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 14px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #666;
+}
+
+.btn-close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 1px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #fff;
+}
+
+.btn-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 1px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #fff;
+}
+
+.tel {
+  display: inline-block;
+  text-indent: 2px;
+  font-family: "ttfirsneue";
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: #FF6E30;
+}
+
+.tel__img {
+  width: 15px;
+  height: 15px;
+  fill: #FF6E30;
+}
+
+.form-input-container {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-size: 9px;
+}
+/*# sourceMappingURL=common.css.map */

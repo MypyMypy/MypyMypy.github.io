@@ -1,0 +1,11 @@
+.header__search-block,
+.header__social-list,
+.blockquote {
+  display: none;
+}
+
+.nav__menu {
+  display: none;
+  opacity: 0;
+}
+/*# sourceMappingURL=toogle.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,qBAAqB;AACrB,oBAAoB;AACpB,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;CACd;;AAED,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "toogle.scss"
+    ],
+    "names": [],
+    "file": "toogle.css"
+}

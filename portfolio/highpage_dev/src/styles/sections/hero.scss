@@ -1,0 +1,63 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.hero {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    min-height: 422px;
+    padding: 30px;
+    padding-right: 40px;
+    background-image: url(/images/hero_1_320.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  &__author {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: $font-sizeText_sm;
+    line-height: 16.41px;
+  }
+
+  &__card-main-title {
+    margin: 0;
+    font-family: $fonttextTT;
+    font-size: 24px;
+    line-height: 110%;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__link-more {
+    @include pagebtn;
+    width: fit-content;
+    text-decoration: none;
+    background-color: $btnColor;
+    font-size: $font-sizeText_sm;
+    padding: 8px 20px;
+  }
+
+  &__card-sub-titile {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: $fonttextTT;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 104%;
+    color: $colorText;
+  }
+
+  &__card-image img{
+    width: 100%;
+  }
+}

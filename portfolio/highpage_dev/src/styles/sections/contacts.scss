@@ -1,0 +1,133 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.contacts {
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: $fonttextTT;
+    font-size: 18px;
+    line-height: 23.2px;
+  }
+
+  &__form {
+    font-size: 0;
+    max-width: 466px;
+  }
+
+  &__form-title {
+    margin: 0;
+    margin-bottom: 7px;
+    font-family: $fonttextTT;
+    font-size: 18px;
+    font-weight: 400;
+    color: $colorText;
+  }
+
+  &__form-desc {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: $font-sizeText_sm;
+    line-height: 18px;
+    font-weight: 400;
+    color: $colorText;
+  }
+
+  &__form-input-container{
+    .just-validate-error-label {
+      color: #ff3030;
+    }
+  }
+
+  &__form-input, &__form-textarea {
+    width: 100%;
+    background-color: #e9e9e9;
+    padding: 12px 23px;
+    border: none;
+    margin-bottom: 20px;
+    color: $colorText;
+    font-family: inherit;
+    resize: none;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  &__form-btn {
+    @include btnreset;
+    @include pagebtn;
+    background-color: $btnColor;
+  }
+}
+
+.map-block {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  left: -30px;
+  height: 470px;
+  width: calc(100% + 60px);
+
+  &__map {
+    @include ghost;
+    z-index: 0;
+
+    [class*="ground-pane"] {
+      filter: grayscale(1)
+    }
+
+    .ymaps-2-1-79-map-copyrights-promo {
+      display: none
+    }
+    .ymaps-2-1-79-copyright__wrap {
+      display: none !important
+    }
+  }
+
+  &__desc-block {
+    z-index: 1;
+    position: relative;
+    padding: 26px 50px 14px 27px;
+    width: 100%;
+
+    &::after {
+      content: '';
+      @include ghost;
+      background-color: $colorText;
+      opacity: .8;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $fonttextTT;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  &__address {
+    font-style: normal;
+    font-size: $font-sizeText_sm;
+    line-height: 18px;
+    color: $colorTextLight;
+    margin-bottom: 13px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+

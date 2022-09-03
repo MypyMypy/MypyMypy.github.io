@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Regular.woff2") format("woff2"), url("/fonts/TTFirsNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ttfirsneue';
+  src: url("/fonts/TTFirsNeue-Bold.woff2") format("woff2"), url("/fonts/TTFirsNeue-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.about {
+  background-color: #202020;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  color: #fff;
+}
+
+.about__title {
+  font-family: "ttfirsneue";
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.about__text {
+  margin: 0;
+  color: #cacaca;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.about__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+  padding-top: 304px;
+  background-image: url(/images/about_320.png);
+  background-repeat: no-repeat;
+  background-size: 100% 278px;
+  background-position: top;
+}
+
+.about__form-title {
+  font-family: "ttfirsneue";
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.about__form-input {
+  width: 100%;
+  padding: 12px 23px;
+  border: none;
+  background-color: #4a4a4a;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about__form-input::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+.about__form-input:-ms-input-placeholder {
+  color: #cacaca;
+}
+
+.about__form-input::-ms-input-placeholder {
+  color: #cacaca;
+}
+
+.about__form-input::placeholder {
+  color: #cacaca;
+}
+
+.about__form-input-container .just-validate-error-label {
+  color: #F06666;
+}
+
+.about__form-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  min-width: 115px;
+  max-width: 100%;
+  color: #fff;
+  font-weight: 700;
+  border: 3px solid #FF6E30;
+  background-color: transparent;
+  padding: 10px 20px;
+  background-color: #FF6E30;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px;
+}
+/*# sourceMappingURL=about.css.map */

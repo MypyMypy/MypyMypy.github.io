@@ -1,0 +1,139 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.header {
+  background-color: $colorText;
+  position: relative;
+  padding: 26px 0 0;
+
+  &__btn-search-open {
+    @include btnreset;
+    height: 20px;
+    width: 20px;
+    justify-self: end;
+    fill: #fff;
+  }
+
+  &__nav {
+    position: relative;
+    left: -20px;
+    width: calc(100% + 40px);
+    background-color: $colorTextMiddle;
+    padding: 10px 20px 12px;
+  }
+
+  &__search-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.logo {
+  display: inline-block;
+  height: fit-content;
+}
+
+.burger {
+  @include btnreset;
+  width: 20px;
+  height: 18px;
+  position: relative;
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &__line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__line:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    width: 50%;
+  }
+}
+
+.nav {
+
+  &__btn-close {
+    position: absolute;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    background-color: #808080;
+  }
+
+  &__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    z-index: 1;
+    padding: 50px 20px 268px;
+    background-color: $colorText;
+  }
+
+  &__list {
+    @include clearlistStyles;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 31px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $fonttextTT;
+    color: #fff;
+    font-size: $font-sizeText_md;
+    line-height: 20px;
+  }
+
+  &__tel {
+    position: absolute;
+    bottom: 37px;
+    left: 18px;
+    font-family: $fonttextTT;
+  }
+}
+
+.search-block {
+  grid-template-columns: 1fr 18px;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 70px;
+  padding: 24px 23px 22px 20px;
+  background-color: $colorText;
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: transparent;
+    color: #e9e9e9;
+    font-family: $fonttextTT;
+    font-size: $font-sizeText_sm;
+    padding: 0;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  &__close {
+    width: 18px;
+    height: 18px;
+    background-color: #c4c4c4;
+  }
+}

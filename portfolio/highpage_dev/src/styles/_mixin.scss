@@ -1,0 +1,56 @@
+@mixin clearlistStyles {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin linkClick {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+  }
+}
+
+@mixin btnreset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+@mixin pagebtn($padding: 8px 20px) {
+  min-width: 115px;
+  max-width: 100%;
+  color: #fff;
+  font-weight: 700;
+  border: 3px solid $btnColor;
+  background-color: transparent;
+  padding: $padding;
+}
+
+@mixin ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin cardtype($top:6px, $right: 5px, $padding: 7px 14px, $font-size: 12px) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: fit-content;
+  padding: $padding;
+  font-size: $font-size;
+  color: #fff;
+  background-color: #333;
+}
+
+

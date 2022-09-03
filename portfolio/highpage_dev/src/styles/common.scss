@@ -1,0 +1,113 @@
+@import '_variable.scss';
+@import '_mixin.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+picture {
+  display: flex;
+}
+
+input, textarea {
+  border-radius: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.page {
+  min-width: 320px;
+}
+
+.container {
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-type {
+  @include cardtype;
+}
+
+.btn-close {
+  @include btnreset;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #666;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #fff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 1px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: #fff;
+  }
+}
+
+.tel {
+  display: inline-block;
+  text-indent: 2px;
+  font-family: $fonttextTT;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: $btnColor;
+
+  &__img {
+    width: 15px;
+    height: 15px;
+    fill: $btnColor;
+  }
+}
+
+.form-input-container {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-size: 9px;
+}
+
+
+

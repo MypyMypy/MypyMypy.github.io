@@ -1,0 +1,140 @@
+@import '../_variable.scss';
+@import '../_mixin.scss';
+
+.projects {
+  padding: 50px 0 54px;
+  color: $colorText;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: $fonttextTT;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+
+  &__grid-item:not(:last-child) .project--large {
+    margin-bottom: 5px;
+  }
+
+  &__grid-item:nth-child(1){
+    .projects__card {
+      background-image: url('/images/project_1_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(2){
+    .projects__card {
+      background-image: url('/images/project_2_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(3){
+    .projects__card {
+      background-image: url('/images/project_3_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(4){
+    .projects__card {
+      background-image: url('/images/project_4_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(5){
+    .projects__card {
+      background-image: url('/images/project_5_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(6){
+    .projects__card {
+      background-image: url('/images/project_6_320.png');
+    }
+  }
+
+  &__grid-item:nth-child(7){
+    .projects__card {
+      background-image: url('/images/project_7_320.png');
+    }
+  }
+}
+
+.project {
+  min-height: 278px;
+  padding-top: 202px;
+  background-repeat: no-repeat;
+  background-size: 100% 184px;
+  position: relative;
+  color: $colorText;
+
+  &__type {
+    padding: 4px 14px
+  }
+
+  &__btn {
+    @include btnreset;
+    @include pagebtn;
+    width: fit-content;
+    padding: 9px 20px;
+    min-width: auto;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: $font-sizeText_md;
+    line-height: 22px;
+  }
+
+  &__date {
+    padding-left: 18px;
+    color: #999;
+    margin-top: auto;
+    background-image: url(/images/mdi_calendar_today.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-size: 12px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $fonttextTT;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__date--large {
+    margin-bottom: 9px;
+    color: #fff;
+    background-image: url(/images/mdi_calendar_today_large.svg);
+  }
+
+  &__desc--large {
+    font-size: $font-sizeText_sm;
+    line-height: 18px;
+  }
+}
+
+.project--small {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 3px;
+}
+
+.project--large {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 422px;
+  padding: 30px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+
