@@ -64,16 +64,6 @@ body {
   inset: 0;
 }
 
-.card__content {
-  transform: translateY(calc(100% + 200px));
-  transition: transform 0.8s ease-in-out;
-}
-
-.card:hover .card__content {
-  pointer-events: all;
-  transform: none;
-}
-
 .card__number {
   position: absolute;
   left: 60%;
@@ -90,11 +80,22 @@ body {
   margin-bottom: 30px;
   text-align: center;
   pointer-events: none;
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .card__desc {
   font-size: 30px;
   text-align: center;
   pointer-events: none;
+  transform: translateY(calc(100% + 200px));
+  transition: transform 0.8s ease-in-out;
 }
 
+.card:hover .card__person {
+  opacity: 1;
+}
+
+.card:hover .card__desc {
+  transform: none;
+}
