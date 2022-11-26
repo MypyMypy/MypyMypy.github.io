@@ -30,7 +30,7 @@
         const subTitle = document.createElement('h2')
         const navMenu = document.createElement('nav');
         const navList = document.createElement('ul');
-        
+
         data.forEach(post => {
             const navItem = document.createElement('li');
             const navLink = document.createElement('a');
@@ -59,7 +59,7 @@
         const subPage = document.createElement('div');
         const linkBtnBack = document.createElement('a');
         const headSubTitle = document.createElement('h1');
-        const postMainText = document.createElement('p'); 
+        const postMainText = document.createElement('p');
 
         linkBtnBack.href='index.html?id=1';
         linkBtnBack.textContent='Back';
@@ -78,7 +78,7 @@
         const posts = await getDataPosts()
         const hash = window.location.search
         const hashid = hash.slice(hash.indexOf('?id=')+4)
-        
+
         const thePage = (hashid == '' || hashid == 1)? createHeadPage(posts): createSubPage(await getDataPost(hashid))
         container.append(thePage)
     }
