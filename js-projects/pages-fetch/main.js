@@ -4,7 +4,7 @@
         const response = await fetch('https://gorest.co.in/public/v2/posts', {
             method: 'GET',
             headers: {
-                Authorization: 'Bearer 77531ea1c8d9107918026937729b4c1800e11f7f7b2b99ce98b75a56769f8851',
+                // Authorization:
                 "Content-type": 'application/json'
             }
         });
@@ -16,7 +16,7 @@
         const response = await fetch(`https://gorest.co.in/public/v2/posts/${postid}`, {
             method: 'GET',
             headers: {
-                Authorization: 'Bearer 77531ea1c8d9107918026937729b4c1800e11f7f7b2b99ce98b75a56769f8851',
+                // Authorization:
                 "Content-type": 'application/json'
             }
         });
