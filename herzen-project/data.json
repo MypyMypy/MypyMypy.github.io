@@ -1,41 +1,89 @@
 {
-    "squadName" : "Super Hero Squad",
-    "homeTown" : "Metro City",
-    "formed" : 2016,
-    "secretBase" : "Super tower",
-    "active" : true,
-    "members" : [
-      {
-        "name" : "Molecule Man",
-        "age" : 29,
-        "secretIdentity" : "Dan Jukes",
-        "powers" : [
-          "Radiation resistance",
-          "Turning tiny",
-          "Radiation blast"
-        ]
-      },
-      {
-        "name" : "Madame Uppercut",
-        "age" : 39,
-        "secretIdentity" : "Jane Wilson",
-        "powers" : [
-          "Million tonne punch",
-          "Damage resistance",
-          "Superhuman reflexes"
-        ]
-      },
-      {
-        "name" : "Eternal Flame",
-        "age" : 1000000,
-        "secretIdentity" : "Unknown",
-        "powers" : [
-          "Immortality",
-          "Heat Immunity",
-          "Inferno",
-          "Teleportation",
-          "Interdimensional travel"
-        ]
-      }
-    ]
+  "page-intro": {
+      "id": 1,
+      "title": "Введение в веб-технологии",
+      "moduleLinkHref": "/page?moduleName=page-intro",
+      "lessonsList": [
+          {
+              "moduleTitle": "Первый модуль",
+              "lessonDescription": "LessonDescription",
+              "hrefToLesson": "/lessonName"
+          },
+          {
+              "moduleTitle": "Второй модуль",
+              "lessonDescription": "LessonDescription",
+              "hrefToLesson": "/lessonName"
+          }
+      ]
+  },
+  "page-base-html": {
+      "id": 2,
+      "title": "Основы HTML",
+      "moduleLinkHref": "/page?moduleName=page-base-html",
+      "modulesList": [
+          {
+              "moduleTitle": "ModuleName",
+              "moduleSubLink": {
+                  "linkTitle": "Title",
+                  "linkHref": "Href"
+              }
+          }
+      ]
+  },
+  "page-base-css": {
+      "id": 3,
+      "title": "Основы CSS",
+      "moduleLinkHref": "/page?moduleName?=page-base-css",
+      "modulesList": [
+          {
+              "moduleTitle": "ModuleName",
+              "moduleSubLink": {
+                  "linkTitle": "Title",
+                  "linkHref": "Href"
+              }
+          }
+      ]
+  },
+  "page-html-css": {
+      "id": 4,
+      "title": "Продвинутый HTML & CSS",
+      "moduleLinkHref": "/page?moduleName=page-html-css",
+      "modulesList": [
+          {
+              "moduleTitle": "ModuleName",
+              "moduleSubLink": {
+                  "linkTitle": "Title",
+                  "linkHref": "Href"
+              }
+          }
+      ]
+  },
+  "page-js": {
+      "id": 5,
+      "title": "Основы JavaScript. Введение в DOM",
+      "moduleLinkHref": "/page?moduleName=page-js",
+      "modulesList": [
+          {
+              "moduleTitle": "ModuleName",
+              "moduleSubLink": {
+                  "linkTitle": "Title",
+                  "linkHref": "Href"
+              }
+          }
+      ]
+  },
+  "page-product": {
+      "id": 6,
+      "title": "Проектная деятельность",
+      "moduleLinkHref": "/page?moduleName=page-product",
+      "modulesList": [
+          {
+              "moduleTitle": "ModuleName",
+              "moduleSubLink": {
+                  "linkTitle": "Title",
+                  "linkHref": "Href"
+              }
+          }
+      ]
   }
+}
