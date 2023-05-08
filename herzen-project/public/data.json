@@ -1515,8 +1515,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty",
-					  "download": ""
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/2-base-html/text.docx",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать текстовый документ"
                   }
@@ -1534,7 +1535,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/2-base-html/img.zip",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать архив с изображениями"
                   }
@@ -1552,7 +1555,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/2-base-html/expected-result-html.png",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать изображение ожидаемого результата"
                   }
@@ -2466,7 +2471,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/3-base-css/expected-result-css.png",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать изображение ожидаемого результата работы"
                   }
@@ -2484,7 +2491,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/3-base-css/img.zip",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать архив с изображениями для выполнения работы"
                   }
@@ -3246,7 +3255,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/4-html-css/expected-result-html-css.png",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать изображение ожидаемого результата работы"
                   }
@@ -3264,7 +3275,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/4-html-css/img.zip",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать архив с изображениями для выполнения работы"
                   }
@@ -5816,7 +5829,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/5-js/expected-results.zip",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать архив с изображениями ожидаемого результата"
                   }
@@ -5834,7 +5849,9 @@
                       "lesson__text"
                     ],
                     "attributes": {
-                      "href": "#empty"
+                      "href": "https://github.com/MypyMypy/MypyMypy.github.io/blob/main/herzen-project/public/lesson-materials/5-js/tasks.js",
+                      "download": "true",
+                      "target": "_blank"
                     },
                     "textContent": "Скачать файл с задачами на кодирование"
                   }
