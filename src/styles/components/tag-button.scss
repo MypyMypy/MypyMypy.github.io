@@ -1,13 +1,22 @@
 .tag-button {
-    font-size: $font-size-small;
-    padding: 2.5px 5px;
-    border-radius: 5px;
-    background-color: rgba($color: $color-secondary, $alpha: .5);
-    backdrop-filter: blur(1px);
-    color: $color-primary;
+  font-size: $font-size-small * 5;
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  background-color: rgba($color: $color-secondary, $alpha: 0.5);
+  backdrop-filter: blur(1px);
+  color: $color-primary;
+  text-align: center;
 
-    &--active {
-        background-color: $color-accent;
-        color: $color-secondary;
-    }
+  &--active {
+    background-color: $color-accent;
+    color: $color-secondary;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: $font-size-small * 3;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: $font-size-small * 1.5;
+  }
 }

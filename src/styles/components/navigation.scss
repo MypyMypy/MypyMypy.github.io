@@ -1,24 +1,23 @@
 .navigation {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    background-color: rgba(0,0,0,0.4);
-    padding: 2vw 4vw;
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    font-size: $font-size-small * 1.5;
-    
-    &__list {
-        display: flex;
-        justify-content: space-between;
-    }
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2vw 4vw;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  font-size: $font-size-small * 2;
 
-    &__link--active {
-        color: $color-accent;
-    }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    @media screen and (min-width: 768px) {
-        font-size: $font-size-small;
-    }
+  &__link--active {
+    color: $color-accent;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: $font-size-small * 1;
+  }
 }
-

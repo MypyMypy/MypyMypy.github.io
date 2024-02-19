@@ -1,62 +1,64 @@
 @import '../components/navigation.scss';
 
 .header {
-    $top: 4dvh;
+  $top: 4dvh;
 
-    position: fixed;
-    z-index: 100;
-    font-size: $font-size-small;
-    top: $top * 2;
-    transition: top 0.1s ease-in-out;
-    left: 0;
-    right: 0;
-    @include color-scheme($color-secondary, transparent);
+  position: fixed;
+  z-index: 100;
+  font-size: $font-size-small;
+  top: $top * 2;
+  transition: top 0.1s ease-in-out;
+  left: 0;
+  right: 0;
+  @include color-scheme($color-secondary, transparent);
+
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+
+  &__navigation {
+    transition: width 0.1s ease-in-out;
+    will-change: width, top;
+  }
+
+  &--scrolled {
+    top: $top;
+
+    .header__navigation {
+      width: 85%;
+
+      @media screen and (min-width: 768px) {
+        width: 80%;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 50%;
+      }
+    }
+  }
+
+  &--sub-page {
+    top: $top;
+    right: 10vw;
+    left: initial;
+    width: fit-content;
+    transition: right 0.2s ease-in-out;
 
     .container {
-        display: flex;
-        align-items: center;
-        min-height: 100%;
+      width: fit-content;
+      padding: 0;
     }
 
-    &__navigation {
-        transition: width 0.1s ease-in-out;
-        will-change: width, top;
+    .navigation {
+      width: fit-content;
+      padding: 1vw 4vw;
+      background-color: $color-accent;
     }
+  }
 
-    &--scrolled {
-        top: $top;
-
-        .header__navigation {
-            width: 80%;
-
-            @media screen and (min-width: 768px) {
-                width: 50%;
-            }
-        }
-    }
-
-    &--sub-page {
-        top: $top;
-        right: 50%;
-        transform: translateX(50%);
-        left: initial;
-        width: fit-content;
-        transition: right 0.2s ease-in-out, transform 0.2s ease-in-out;
-
-        .container {
-            width: fit-content;
-            padding: 0;
-        }
-
-        .navigation {
-            width: fit-content;
-            padding: 1vw 4vw;
-            background-color: $color-accent;
-        }
-    }
-
-    &--sub-page.header--scrolled {
-        right: 5vw;
-        transform: none;
-    }
+  &--sub-page.header--scrolled {
+    right: 5vw;
+  }
 }

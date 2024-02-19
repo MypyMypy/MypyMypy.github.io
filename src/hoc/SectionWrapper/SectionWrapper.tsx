@@ -1,36 +1,34 @@
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
-import { useAppDispatch } from "../../hooks/hooks";
-import { switchActiveSection } from "../../store/activeSection/activeSection";
+import { useAppDispatch } from '../../hooks/hooks';
+import { switchActiveSection } from '../../store/activeSection/activeSection';
 
 interface SectionWrapperI {
-    children: React.ReactNode;
-    sectionClass?: string;
-    containerClass?: string;
-    id: string;
+  children: React.ReactNode;
+  sectionClass?: string;
+  containerClass?: string;
+  id: string;
 }
 
 const SectionWrapper: React.FC<SectionWrapperI> = (props) => {
-    const containerClasses = ['container', props.containerClass].join(' ').trim();
-    const sectionId = props.id;
+  const containerClasses = ['container', props.containerClass].join(' ').trim();
+  const sectionId = props.id;
 
-    const {ref, inView} = useInView({
-        threshold: 0.5,
-    });
-    const dispatch = useAppDispatch();
-    
-    useEffect(()=> {
-        dispatch(switchActiveSection({inView, sectionId}))
-    }, [inView, dispatch, sectionId]);
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+  const dispatch = useAppDispatch();
 
-    return (
-        <section ref={ref} className={props.sectionClass} id={props.id}>
-            <div className={containerClasses}>
-                {props.children}
-            </div>
-        </section>
-    );
-}
+  useEffect(() => {
+    dispatch(switchActiveSection({ inView, sectionId }));
+  }, [inView, dispatch, sectionId]);
 
-export default SectionWrapper
+  return (
+    <section ref={ref} className={props.sectionClass} id={props.id}>
+      <div className={containerClasses}>{props.children}</div>
+    </section>
+  );
+};
+
+export default SectionWrapper;
