@@ -4,7 +4,8 @@ import type { Projects } from '../../data';
 import ControlsProjects from '../../components/ControlsProjects/ControlsProjects';
 import ProjectsList from '../../components/ProjectsList/ProjectsList';
 import SectionWrapper from '../../hoc/SectionWrapper/SectionWrapper';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import scrollToUp from '../../features/scrollToUp';
 
 const initialState = [...projectsData].sort((a, b) => {
   const aDate = new Date(Number(a.date.year), Number(a.date.month) - 1);
@@ -16,6 +17,10 @@ const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState<Projects>(initialState);
   const [activeTopDate, setActiveTopDate] = useState(true);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+
+  useEffect(()=> {
+    scrollToUp('instant');
+  }, [])
 
   const updateProjectsByFilter = (activeFilters: string[]) => {
     if (activeFilters.length > 0) {

@@ -1,3 +1,5 @@
+import scrollToUp from "./scrollToUp";
+
 const smothScrollLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
   const target = event.target as HTMLAnchorElement;
@@ -8,7 +10,7 @@ const smothScrollLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
 
   if (id && document.getElementById(id))
     section?.scrollIntoView({ behavior: 'smooth' });
-  else window.scrollTo({ top: 0, behavior: 'smooth' });
+  else scrollToUp('smooth');
 };
 
 export default smothScrollLink;
