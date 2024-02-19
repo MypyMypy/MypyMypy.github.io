@@ -35,7 +35,7 @@
     transition: filter 0.2s ease-in-out;
 
     @media screen and (hover: none) {
-      filter: grayscale(0)
+      filter: grayscale(0);
     }
   }
 
