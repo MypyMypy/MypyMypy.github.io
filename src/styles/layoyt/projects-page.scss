@@ -1,0 +1,18 @@
+@import '../components/projects-list.scss';
+@import '../components/controls.scss';
+
+.projects-page {
+    padding: 10vw 0;
+
+    &__header {
+        margin-bottom: 3vw;
+    }
+
+    &__controls {
+        margin-bottom: 3vw;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 5vw 0;
+    }
+}

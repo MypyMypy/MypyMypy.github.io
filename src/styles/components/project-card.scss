@@ -1,0 +1,82 @@
+@import './tag-button.scss';
+
+.project-card {
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1vw;
+        width: 100%;
+        border-radius: 2vw;
+        height: 20dvw;
+        overflow: hidden;
+        background-color: rgba($color: $color-primary, $alpha: .05);
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        z-index: 0;
+        object-position: center;
+        object-fit: contain;
+        max-height: 100%;
+        filter: grayscale(1);
+        transition: filter 0.2s ease-in-out;
+    }
+
+    &:hover &__image {
+        filter: grayscale(0);
+    }
+
+    &__filters-list {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        gap: 1vw;
+    }
+
+    &__date {
+        position: absolute;
+        right: 5%;
+        top: 2.5%;
+        padding: 2.5% 5%;
+        border-radius: 1vw;
+        @include  color-scheme($color-secondary, rgba($color-primary, .5));
+        font-size: small;
+    }
+
+    &__details {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 1vw;
+
+        &-link {
+            display: inline-block;
+            font-size: 0;
+            height: 5vw;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &-link:nth-child(1) {
+            width: 20vw;
+        }
+    }
+
+    .tag-button {
+        pointer-events: none;
+    }
+}

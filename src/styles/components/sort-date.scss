@@ -1,0 +1,32 @@
+.sort-date-wrapper {
+    display: flex;
+    gap: 0;
+
+    &__button {
+        height: 5vw;
+        width: 2.5vw;
+        background-color: transparent;
+
+        @media screen and (min-width: 425px) {
+            height: 3vw;
+            width: 1.5vw;
+        }
+
+        &:nth-child(2) {
+            transform: rotate(180deg);
+        }
+
+        img {
+            height: 100%;
+            object-position: center center;
+        }
+
+        &--active {
+            pointer-events: none;
+        }
+
+        &--active img {
+            filter: invert(0.5);
+        }
+    }
+}

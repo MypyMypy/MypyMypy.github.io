@@ -1,0 +1,15 @@
+@import './sort-date.scss';
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+
+    .skills {
+        padding: 0.5vw 1vw;
+        border-radius: 1vw;
+        background-color: rgba($color: $color-primary, $alpha: .1);
+    }
+}

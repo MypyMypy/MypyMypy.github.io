@@ -1,0 +1,42 @@
+@import '../components/skills.scss';
+
+.hero {
+    position: relative;
+    @include color-scheme($scheme-dark ...);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 5vh;
+        padding-top: 20vh;
+        padding-bottom: 5vh;
+        min-height: 100lvh;
+    }
+
+    &__main-header {
+        display: flex;
+        flex-direction: column;
+        font-size: $font-size-over-large;
+    }
+
+    .skills {
+        opacity: 0.5;
+        transform: translateX(-100%);
+        transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+        pointer-events: none;
+    }
+
+    &--in-view .skills {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: $font-size-small;
+
+        &__wrapper {
+            padding-bottom: 3vh;
+        }
+    }
+}

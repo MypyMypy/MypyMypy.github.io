@@ -1,0 +1,5 @@
+.button {
+  transition:
+    border-color linear 0.25s,
+    background-color linear 0.2s;
+}

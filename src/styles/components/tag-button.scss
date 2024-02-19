@@ -1,0 +1,13 @@
+.tag-button {
+    font-size: $font-size-small;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+    background-color: rgba($color: $color-secondary, $alpha: .5);
+    backdrop-filter: blur(1px);
+    color: $color-primary;
+
+    &--active {
+        background-color: $color-accent;
+        color: $color-secondary;
+    }
+}

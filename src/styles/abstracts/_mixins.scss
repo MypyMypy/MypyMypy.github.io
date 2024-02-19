@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin color-scheme($text, $bg) {
+    color: $text;
+    background-color: $bg;
+}
+
+@mixin section-style($text, $bg, $k-padding: 1) {
+    @include color-scheme($text, $bg);
+    padding: 7vw * $k-padding 0;
+}
+
+@mixin page-button($text, $bg) {
+    @include color-scheme($text, $bg);
+    padding: $font-size-small $font-size-small * 1.25;
+    font-size: $font-size-small;
+    border-radius: calc($font-size-small / 2);
+    cursor: pointer;
+}

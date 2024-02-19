@@ -1,0 +1,23 @@
+@import '../components/socials.scss';
+
+.footer {
+    @include section-style($color-secondary, $color-primary, 1);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5dvw;
+    }
+
+    .socials {
+        filter: grayscale(1);
+        transition: filter 1s linear, transform 0.5s ease-in-out;
+        transform: scale(0.5);
+    }
+
+    &--in-view .socials {
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,18 @@
+.socials {
+    $gap: 3dvw;
+
+    display: flex;
+    gap: $gap * 1.5;
+
+    &__link {
+        height: $gap;
+        width: $gap;
+        display: inline-block;
+        filter: grayscale(0);
+        transition: filter 0.2s linear;
+    
+        &:hover {
+            filter: grayscale(0.7);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import './styles/abstracts/variables';
+@import './styles/abstracts/mixins';
+@import './styles/abstracts/fonts.scss';
+
+@import './styles/base/global.scss';
+@import './styles/base/container.scss';
+
+@import './styles/layoyt/header.scss';
+@import './styles/layoyt/hero.scss';
+@import './styles/layoyt/about.scss';
+@import './styles/layoyt/projects.scss';
+@import './styles/layoyt/connect.scss';
+@import './styles/layoyt/footer.scss';
+
+@import './styles/layoyt/projects-page.scss';

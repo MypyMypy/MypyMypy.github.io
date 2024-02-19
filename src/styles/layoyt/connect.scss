@@ -1,0 +1,56 @@
+.connect {
+    @include section-style($color-primary, $color-secondary, 1.28);
+    position: relative;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        align-items: center;
+        max-width: 60%;
+    }
+
+    &__header {
+        font-size: $font-size-more-large;
+    }
+
+    &__note {
+        font-size: $font-size-small;
+        text-align: center;
+    }
+
+    &__button {
+        position: relative;
+        z-index: 1;
+        @include page-button($color-accent-secondary, $color-accent);
+    }
+
+    &__image {
+        position: absolute;
+        z-index: 0;
+        left: 10%;
+        bottom: 40%;
+        height: 60%;
+        aspect-ratio: 2/1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid rgba($color: $color-primary, $alpha: .3);
+            transform: rotate(30deg);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid rgba($color: $color-primary, $alpha: .3);
+            transform: rotate(-60deg);
+        }
+    }
+}
