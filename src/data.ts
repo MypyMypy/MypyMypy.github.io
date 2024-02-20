@@ -128,7 +128,7 @@ export const projects = [
     tags: ['JS', 'CSS3', 'HTML5', 'Webpack'],
     image:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/bankCard.png',
-    deploy: 'https://mypymypy.github.io/archived-projects/bancCard/dist/',
+    deploy: 'https://mypymypy.github.io/archived-projects/bankCard/dist/',
     srcGit:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/bankCard/',
   },
