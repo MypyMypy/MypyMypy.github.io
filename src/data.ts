@@ -211,7 +211,7 @@ export const projects = [
     },
     tags: ['JS', 'HTML5', 'CSS3'],
     image:
-      'https://mypymypy.github.io/archived-projects/images/star-wars.jpg',
+      'https://mypymypy.github.io/archived-projects/images/star-wars.png',
     deploy: 'https://mypymypy.github.io/archived-projects/star-wars/',
     srcGit:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/star-wars/',
