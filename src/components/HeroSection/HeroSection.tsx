@@ -18,7 +18,6 @@ const Hero: React.FC = () => {
         </h1>
         <Skills />
       </div>
-      {/* TODO: Animation skills Buttons */}
     </SectionWrapper>
   );
 };

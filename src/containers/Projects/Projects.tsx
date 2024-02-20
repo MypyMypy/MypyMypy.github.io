@@ -18,14 +18,14 @@ const ProjectsPage: React.FC = () => {
   const [activeTopDate, setActiveTopDate] = useState(true);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     scrollToUp('instant');
-  }, [])
+  }, []);
 
   const updateProjectsByFilter = (activeFilters: string[]) => {
     if (activeFilters.length > 0) {
       setProjects(
-        projects.filter((project) => {
+        initialState.filter((project) => {
           if (activeFilters.every((tag) => project.tags.includes(tag)))
             return project;
         })

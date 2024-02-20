@@ -45,6 +45,12 @@ const ProjectCard: React.FC<ProjectCardPropsI> = (props) => {
   return (
     <article className={className}>
       <div className={className + '__top'}>
+        <a
+          className={className + '__deploy-link'}
+          href={props.deploy}
+          target="_blank"
+          rel="noreferrer"
+        ></a>
         <img
           className={className + '__image'}
           src={props.imagePath}

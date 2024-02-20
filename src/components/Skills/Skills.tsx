@@ -5,7 +5,7 @@ interface SkillsPropsI {
 }
 
 const Skills: React.FC<SkillsPropsI> = ({ filterTags = () => {} }) => {
-  const tags = new Set();
+  const tags = new Set(['React', 'TS', 'Redux', 'SCSS', 'HTML5', 'CSS3', 'JS']);
 
   const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

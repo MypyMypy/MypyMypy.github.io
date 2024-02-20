@@ -1,4 +1,4 @@
-import scrollToUp from "./scrollToUp";
+import scrollToUp from './scrollToUp';
 
 const smothScrollLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
