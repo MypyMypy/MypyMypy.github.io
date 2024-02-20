@@ -101,7 +101,7 @@ export const projects = [
     },
     tags: ['React', 'TS', 'ContextAPI', 'SPA', 'CSSModules', 'HTML5'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/pokemons-wiki.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/pokemons-wiki.png',
     deploy: 'https://mypymypy.github.io/react-pokemon-project/',
     srcGit: 'https://github.com/MypyMypy/react-pokemon-project',
   },
@@ -114,7 +114,7 @@ export const projects = [
     },
     tags: ['React', 'JS', 'Firebase', 'Webpack', 'Axios', 'CSSModules'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/burger.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/burger.png',
     deploy: 'https://mypymypy.github.io/',
     srcGit: 'https://github.com/MypyMypy/react-udemy-burger',
   },
@@ -127,10 +127,10 @@ export const projects = [
     },
     tags: ['JS', 'CSS3', 'HTML5', 'Webpack'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/bankCard.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/bankCard.png',
     deploy: 'https://mypymypy.github.io/archived-projects/bancCard/dist/',
     srcGit:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/bankCard/',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/bankCard/',
   },
   {
     name: 'Guess a Couple',
@@ -141,10 +141,10 @@ export const projects = [
     },
     tags: ['JS', 'CSS3', 'HTML5'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/guess-a-couple.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/guess-a-couple.png',
     deploy: 'https://mypymypy.github.io/archived-projects/guess-a-couple/',
     srcGit:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/guess-a-couple/',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/guess-a-couple/',
   },
   {
     name: 'TODO',
@@ -155,10 +155,10 @@ export const projects = [
     },
     tags: ['JS', 'BootsTrap', 'CSS3', 'HTML5'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/todo.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/todo.png',
     deploy: 'https://mypymypy.github.io/archived-projects/todo/',
     srcGit:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/todo/',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/todo/',
   },
   {
     name: 'HighPage',
@@ -170,7 +170,7 @@ export const projects = [
     },
     tags: ['JS', 'YMaps', 'GSAP', 'GULP', 'HTML5', 'SCSS'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/highpage.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/highpage.png',
     deploy: 'https://mypymypy.github.io/archived-projects/highpage/',
     srcGit: 'https://github.com/MypyMypy/HighPage/',
   },
@@ -183,7 +183,7 @@ export const projects = [
     },
     tags: ['JS', 'HTML5', 'CSS3', 'JQuery'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/highpage.png',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/highpage.png',
     deploy: 'https://mypymypy.github.io/Blanchard/',
     srcGit:
       'https://github.com/MypyMypy/Blanchard/blob/main/img/gimages11_1024.jpg',
@@ -197,10 +197,10 @@ export const projects = [
     },
     tags: ['JS', 'HTML5', 'CSS3', 'GSAP'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/practicing-GSAP.jpg',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/practicing-GSAP.jpg',
     deploy: 'https://mypymypy.github.io/archived-projects/practicing-GSAP/',
     srcGit:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/practicing-GSAP/',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/practicing-GSAP/',
   },
   {
     name: 'Star Wars',
@@ -211,10 +211,10 @@ export const projects = [
     },
     tags: ['JS', 'HTML5', 'CSS3'],
     image:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/images/star-wars.jpg',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/images/star-wars.jpg',
     deploy: 'https://mypymypy.github.io/archived-projects/star-wars/',
     srcGit:
-      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/archived-projects/star-wars/',
+      'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/star-wars/',
   },
 ];
 
