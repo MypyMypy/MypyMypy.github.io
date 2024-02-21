@@ -22,6 +22,7 @@
 
   .skills {
     opacity: 0.5;
+    will-change: contents;
     transform: translateX(-100%);
     transition:
       transform 1.2s ease-in-out,

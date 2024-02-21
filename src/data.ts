@@ -113,8 +113,7 @@ export const projects = [
       month: '03',
     },
     tags: ['React', 'JS', 'Firebase', 'Webpack', 'Axios', 'CSSModules'],
-    image:
-      'https://mypymypy.github.io/archived-projects/images/burger.png',
+    image: 'https://mypymypy.github.io/archived-projects/images/burger.png',
     deploy: 'https://mypymypy.github.io/',
     srcGit: 'https://github.com/MypyMypy/react-udemy-burger',
   },
@@ -126,8 +125,7 @@ export const projects = [
       month: '12',
     },
     tags: ['JS', 'CSS3', 'HTML5', 'Webpack'],
-    image:
-      'https://mypymypy.github.io/archived-projects/images/bankCard.png',
+    image: 'https://mypymypy.github.io/archived-projects/images/bankCard.png',
     deploy: 'https://mypymypy.github.io/archived-projects/bankCard/dist/',
     srcGit:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/bankCard/',
@@ -154,8 +152,7 @@ export const projects = [
       month: '09',
     },
     tags: ['JS', 'BootsTrap', 'CSS3', 'HTML5'],
-    image:
-      'https://mypymypy.github.io/archived-projects/images/todo.png',
+    image: 'https://mypymypy.github.io/archived-projects/images/todo.png',
     deploy: 'https://mypymypy.github.io/archived-projects/todo/',
     srcGit:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/todo/',
@@ -169,8 +166,7 @@ export const projects = [
       month: '06',
     },
     tags: ['JS', 'YMaps', 'GSAP', 'GULP', 'HTML5', 'SCSS'],
-    image:
-      'https://mypymypy.github.io/archived-projects/images/highpage.png',
+    image: 'https://mypymypy.github.io/archived-projects/images/highpage.png',
     deploy: 'https://mypymypy.github.io/archived-projects/highpage/',
     srcGit: 'https://github.com/MypyMypy/HighPage/',
   },
@@ -182,8 +178,7 @@ export const projects = [
       month: '06',
     },
     tags: ['JS', 'HTML5', 'CSS3', 'JQuery'],
-    image:
-      'https://mypymypy.github.io/Blanchard/img/gimages11_720.jpg',
+    image: 'https://mypymypy.github.io/Blanchard/img/gimages11_720.jpg',
     deploy: 'https://mypymypy.github.io/Blanchard/',
     srcGit:
       'https://github.com/MypyMypy/Blanchard/blob/main/img/gimages11_1024.jpg',
@@ -199,8 +194,7 @@ export const projects = [
     image:
       'https://mypymypy.github.io/archived-projects/images/practicing-GSAP.jpg',
     deploy: 'https://mypymypy.github.io/archived-projects/practicing-GSAP/',
-    srcGit:
-      'https://github.com/MypyMypy/Practicing-GSAP',
+    srcGit: 'https://github.com/MypyMypy/Practicing-GSAP',
   },
   {
     name: 'Star Wars',
@@ -210,11 +204,30 @@ export const projects = [
       month: '09',
     },
     tags: ['JS', 'HTML5', 'CSS3'],
-    image:
-      'https://mypymypy.github.io/archived-projects/images/star-wars.png',
+    image: 'https://mypymypy.github.io/archived-projects/images/star-wars.png',
     deploy: 'https://mypymypy.github.io/archived-projects/star-wars/',
     srcGit:
       'https://github.com/MypyMypy/MypyMypy.github.io/tree/main/public/archived-projects/star-wars/',
+  },
+];
+
+export const roadmap = [
+  {
+    title:
+      'Teacher of modules on web development at the online educational platform Skillbox',
+    date: 'since 2021',
+  },
+  {
+    title: 'Studying ReactJS and its environment',
+    date: 'since 2022',
+  },
+  {
+    title: `Bachelor's degree in Computer Science and Information Technologies in Education at the RSPU`,
+    date: '2023',
+  },
+  {
+    title: `Master's degree in Web Technologies at the ITMO`,
+    date: '2023 - 2025',
   },
 ];
 
