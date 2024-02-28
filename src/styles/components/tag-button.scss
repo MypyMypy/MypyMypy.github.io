@@ -1,5 +1,5 @@
 .tag-button {
-  font-size: $font-size-small * 5;
+  font-size: $font-size-small * 2;
   padding: 2.5px 5px;
   border-radius: 5px;
   background-color: rgba($color: $color-secondary, $alpha: 0.5);
@@ -13,7 +13,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    font-size: $font-size-small * 3;
+    font-size: $font-size-small * 2;
   }
 
   @media screen and (min-width: 1024px) {
