@@ -54,7 +54,7 @@ const ProjectsSection: React.FC = () => {
         <Swiper className="projects__swiper" spaceBetween={'50px'}>
           {slides}
         </Swiper>
-        <p>
+        <p className="projects__text">
           Lets see{' '}
           <Link className="accent" to="/projects">
             all my projects.

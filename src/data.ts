@@ -23,13 +23,74 @@ export const links = [
 
 export const projects = [
   {
+    name: 'Users Searching',
+    description: `Optimized user search with virtualization and infinite scroll`,
+    date: {
+      year: '2024',
+      month: '03',
+    },
+    tags: ['React', 'TS', 'Context API', 'Vite'],
+    image: 'https://mypymypy.github.io/vk-search.webp',
+    deploy: 'https://mypymypy.github.io/vk-search-task/',
+    srcGit: 'https://github.com/MypyMypy/vk-search-task',
+  },
+  {
+    name: 'VK Groups',
+    description: `Interface for viewing groups on a social network`,
+    date: {
+      year: '2024',
+      month: '03',
+    },
+    tags: ['React', 'TS', 'RTK', 'VKUI', 'FSD', 'Vite'],
+    image: 'https://mypymypy.github.io/vk-groups.webp',
+    deploy: 'https://mypymypy.github.io/vk-groups-task/',
+    srcGit: 'https://github.com/MypyMypy/vk-groups-task',
+  },
+  {
+    name: 'VK Market',
+    description: `Interface of the finished cart and order panel`,
+    date: {
+      year: '2024',
+      month: '03',
+    },
+    tags: ['React', 'TS', 'RTK', 'VKUI', 'FSD', 'Vite'],
+    image: 'https://mypymypy.github.io/vk-market.webp',
+    deploy: 'https://mypymypy.github.io/vk-market-task/',
+    srcGit: 'https://github.com/MypyMypy/vk-market-task',
+  },
+  {
+    name: 'VK Forms',
+    description: `Practice in using VK UI and VK Miniapp`,
+    date: {
+      year: '2024',
+      month: '03',
+    },
+    tags: ['React', 'TS', 'VKUI', 'Tansack Query', 'Vite', 'React Hook Form'],
+    image: 'https://mypymypy.github.io/vk-forms.webp',
+    deploy:
+      'https://prod-app51879170-bd4527c7e68e.pages-ac.vk-apps.com/index.html',
+    srcGit: 'https://github.com/MypyMypy/vk-forms-task?tab=readme-ov-file',
+  },
+  {
+    name: 'Weather in St. Petersburg',
+    description: `Weather forecast application in St. Petersburg`,
+    date: {
+      year: '2024',
+      month: '03',
+    },
+    tags: ['React', 'TS', 'MobX', 'Vite', 'ThreeJS', 'SCSS'],
+    image: 'https://mypymypy.github.io/hh-test-weather.webp',
+    deploy: 'https://mypymypy.github.io/hh-test-spb-weather/',
+    srcGit: 'https://github.com/MypyMypy/hh-test-spb-weather',
+  },
+  {
     name: 'Portfolio Page',
     description: `Its this page!`,
     date: {
       year: '2024',
       month: '02',
     },
-    tags: ['React', 'TS', 'Redux', 'SPA', 'BEM', 'SCSS', 'HTML5'],
+    tags: ['React', 'TS', 'Redux', 'SPA', 'BEM', 'SCSS'],
     image: 'https://mypymypy.github.io/page-image.png',
     deploy: 'https://mypymypy.github.io/',
     srcGit: 'https://github.com/MypyMypy/MypyMypy.github.io/',
@@ -216,10 +277,6 @@ export const roadmap = [
     title:
       'Teacher of modules on web development at the online educational platform Skillbox',
     date: 'since 2021',
-  },
-  {
-    title: 'Studying ReactJS and its environment',
-    date: 'since 2022',
   },
   {
     title: `Bachelor's degree in Computer Science and Information Technologies in Education at the RSPU`,

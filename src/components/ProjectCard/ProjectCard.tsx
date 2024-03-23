@@ -1,4 +1,4 @@
-import gitPagesIcon from '../../assets/images/icons/github-pages.svg';
+import gitPagesIcon from '../../assets/images/github-pages.webp';
 import gitHubIcon from '../../assets/images/icons/github-icon.svg';
 
 interface ProjectCardPropsI {
@@ -36,14 +36,16 @@ const ProjectCard: React.FC<ProjectCardPropsI> = (props) => {
       >
         <img src={gitHubIcon} alt="GitHub" />
       </a>
-      <span className={className + '__date'}>
-        {props.date.year + ' / ' + props.date.month}
-      </span>
     </div>
   ) : null;
 
   return (
     <article className={className}>
+      {details ? (
+        <span className={className + '__date'}>
+          {props.date.year + ' / ' + props.date.month}
+        </span>
+      ) : null}
       <div className={className + '__top'}>
         <a
           className={className + '__deploy-link'}

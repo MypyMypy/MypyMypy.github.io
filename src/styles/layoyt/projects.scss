@@ -2,6 +2,7 @@
 
 .projects {
   @include section-style($color-primary, $color-secondary, 1.45);
+  position: relative;
 
   h2 {
     margin-bottom: 5vw;
@@ -30,6 +31,11 @@
         flex: 1 1 33%;
       }
     }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
   }
 
   &--in-view &__swiper {

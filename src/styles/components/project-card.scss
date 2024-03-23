@@ -1,12 +1,23 @@
 @import './tag-button.scss';
 
 .project-card {
+  $border-radius: 2vh;
+
   height: 100%;
   position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: $font-size-default;
+
+  @media screen and (min-width: 560px) {
+    font-size: $font-size-small;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: $font-size-small * 0.75;
+  }
 
   &__top {
     position: relative;
@@ -14,7 +25,7 @@
     grid-template-rows: 60% auto;
     align-items: center;
     width: 100%;
-    border-radius: 2vw;
+    border-radius: $border-radius;
     height: 30vw;
     min-height: 300px;
     overflow: hidden;
@@ -43,10 +54,6 @@
 
       @media screen and (min-width: 768px) {
         font-size: $font-size-small;
-      }
-
-      @media screen and (min-width: 768px) {
-        font-size: $font-size-small * 0.9;
       }
     }
   }
@@ -80,6 +87,7 @@
 
   &__date {
     position: absolute;
+    z-index: 1000;
     right: 5%;
     top: 2.5%;
     padding: 2.5% 5%;
@@ -89,23 +97,42 @@
   }
 
   &__details {
+    position: relative;
     margin-top: auto;
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 40% 3vw;
     grid-template-rows: 10vw;
-    justify-content: space-between;
+    padding: 0.5vw 1vw;
+    justify-content: space-around;
+    align-items: center;
     font-size: 0;
+    border-radius: $border-radius;
+    box-shadow: 0 0 20px rgba($color-primary, 0.5);
+    background-color: rgba($color: #000, $alpha: 0.1);
 
-    img {
-      height: 100%;
+    @media screen and (min-width: 768px) {
+      grid-template-rows: 5vw;
     }
-  }
 
-  &__details-link {
-    border-radius: 50%;
-    box-shadow:
-      0 0 2vw 2vw rgba($color: $color-accent, $alpha: 0.15),
-      inset 0 0 2vw 2vw rgba($color: $color-accent, $alpha: 0.15);
+    ::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%) scaleY(0.75);
+      width: 2px;
+      border-radius: $border-radius;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+
+    a {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
   }
 
   .tag-button {

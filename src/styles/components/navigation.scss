@@ -17,7 +17,7 @@
     color: $color-accent;
   }
 
-  @media screen and (min-width: 1024px) {
-    font-size: $font-size-small * 1;
+  @media screen and (min-width: 768px) {
+    font-size: $font-size-small;
   }
 }
