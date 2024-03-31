@@ -31,8 +31,8 @@ export const projects = [
     },
     tags: ['React', 'TS', 'Context API', 'Vite'],
     image: 'https://mypymypy.github.io/projects-images/vk-search.webp',
-    deploy: 'https://mypymypy.github.io/vk-search-task/',
-    srcGit: 'https://github.com/MypyMypy/vk-search-task',
+    deploy: 'https://mypymypy.github.io/users-virtual-scrolling/',
+    srcGit: 'https://github.com/MypyMypy/users-virtual-scrolling',
   },
   {
     name: 'VK Groups',
@@ -55,8 +55,8 @@ export const projects = [
     },
     tags: ['React', 'TS', 'RTK', 'VKUI', 'FSD', 'Vite'],
     image: 'https://mypymypy.github.io/projects-images/vk-market.webp',
-    deploy: 'https://mypymypy.github.io/vk-market-task/',
-    srcGit: 'https://github.com/MypyMypy/vk-market-task',
+    deploy: 'https://mypymypy.github.io/vkui-cart-and-order/',
+    srcGit: 'https://github.com/MypyMypy/vkui-cart-and-order',
   },
   {
     name: 'VK Forms',
@@ -67,9 +67,8 @@ export const projects = [
     },
     tags: ['React', 'TS', 'VKUI', 'Tansack Query', 'Vite', 'React Hook Form'],
     image: 'https://mypymypy.github.io/projects-images/vk-forms.webp',
-    deploy:
-      'https://prod-app51879170-bd4527c7e68e.pages-ac.vk-apps.com/index.html',
-    srcGit: 'https://github.com/MypyMypy/vk-forms-task?tab=readme-ov-file',
+    deploy: 'https://mypymypy.github.io/vkui-forms/',
+    srcGit: 'https://github.com/MypyMypy/vkui-forms',
   },
   {
     name: 'Weather in St. Petersburg',
