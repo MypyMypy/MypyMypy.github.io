@@ -1,0 +1,14 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/fonts.scss';
+
+@import './base/global.scss';
+
+@import './layoyt/header.scss';
+@import './layoyt/hero.scss';
+@import './layoyt/about.scss';
+@import './layoyt/projects.scss';
+@import './layoyt/connect.scss';
+@import './layoyt/footer.scss';
+
+@import './layoyt/projects-page.scss';
