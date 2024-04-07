@@ -1,1 +1,0 @@
-export { ConnectSection } from './ConnectSection';

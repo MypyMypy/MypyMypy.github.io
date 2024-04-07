@@ -1,1 +1,0 @@
-export { ProjectsDemoSection } from './ProjectsDemoSection';
