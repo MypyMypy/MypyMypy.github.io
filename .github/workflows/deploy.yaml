@@ -9,30 +9,18 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Clean gh-pages branch
-        run: |
-          git checkout gh-pages
-          git pull
-          git rm -r .
-          git commit -m "Clean gh-pages branch"
-          git push
+      - name: Install dependencies
+        run: npm install
 
       - name: Build project
-        run: npm install
-      - run: npm run build
+        run: npm run build
 
       - name: Deploy to gh-pages
-        run: |
-          git checkout gh-pages
-          git pull
-          cp -r build/* .
-          git add .
-          git commit -m "Deploy to gh-pages"
-          git push
+        run: npx gh-pages -d dist
