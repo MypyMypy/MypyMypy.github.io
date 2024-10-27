@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
       <div ref={ref} className="hero__wrapper">
         <h1 className="hero__main-header">
           <span>Danil Bogdanchikov</span>
-          <span>Frontend Developer 4+ years</span>
+          <span>Frontend Developer</span>
         </h1>
         <Skills />
       </div>
