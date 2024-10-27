@@ -23,4 +23,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to gh-pages
-        run: npx gh-pages -d dist -u "${{ secrets.USERNAME }}"
+        run: npx gh-pages -d dist
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
